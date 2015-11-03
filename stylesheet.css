@@ -1,0 +1,398 @@
+@import url(https://fonts.googleapis.com/css?family=Questrial);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+
+/* ==============================
+              RESETS
+   ============================== */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+
+
+/* ==============================
+              GENERAL
+   ============================== */
+
+p {
+  padding:0;
+  margin:0;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+/* ==============================
+              LAYOUT
+   ============================== */
+.container {
+  min-height: 100%;
+  max-width: 1337px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.header{
+  position: relative;
+  padding: 40px 24px 0px;
+  margin-bottom:30px;
+  min-height: 200px;
+}
+
+.section{
+  position: relative;
+  padding: 0 20px 20px;
+}
+
+.logo{
+  margin: auto;
+}
+
+.banner{
+  width: 200px;
+  height: 65px;
+  margin-top:30px;
+  margin-bottom: 40px;
+  background-image: url("img/modest-industries-banner-logo.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+
+.menu-btn {
+  width: 64px;
+  margin: 13px auto 0;
+  text-align: center;
+  border-bottom:2px solid black;
+  cursor: pointer;
+}
+
+#menu {
+  display:none;
+}
+
+#menu ul{
+  display: block;
+  margin: 20px 0 60px;
+}
+
+#menu li{
+  display: block;
+  margin: 10px 0;
+}
+
+.content-box{
+  height:260px;
+  width: 100%;
+}
+
+.pencil {
+  display: none;
+}
+
+
+/* ==============================
+             TYPOGRAPHY
+   ============================== */
+body{
+  font-family: 'Questrial', sans-serif;
+  font-size: 16px;
+  /*-webkit-font-smoothing: antialiased;*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', Georgia, Times, 'Times New Roman', serif;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: normal;
+  margin-bottom: 24px;
+}
+
+h1.intro {
+}
+
+p{
+  font-size: 1em;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  margin-bottom: 20px;
+  max-width: 520px;
+}
+
+.menu-btn{
+  font-size: 1.4em
+}
+
+#menu li {
+  text-align: center;
+  font-size:1.2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+/* ==============================
+               COLOUR
+   ============================== */
+body,
+a:hover {
+  color: #333;
+}
+
+body,
+.content-box {
+  background-color: #f4f4f4;
+}
+
+.container{
+  background-color: #fff;
+}
+
+a{
+  color:#999;
+}
+
+a:hover {
+  border-bottom: 2px solid black;
+}
+
+.red{
+  color: #ff6666;
+}
+
+.green{
+  color: #22b573;
+}
+
+.yellow{
+  color: #fcee21;
+}
+
+.pink{
+  color: #ff7bac;
+}
+
+.orange{
+  color: #f7931e;
+}
+
+.blue{
+  color: #1691d6;
+}
+
+
+
+/* ==============================
+          MEDIA QUERIES
+   ============================== */
+
+@media screen and (min-width: 320px) {
+  
+}
+
+@media screen and (min-width: 420px) {
+  h1.intro {
+    display: block;
+    font-size: 30px;
+    line-height: 1.1;
+    font-weight: normal;
+    margin-bottom: 24px;
+  }
+
+  .section {
+    padding: 0 40px 40px;
+  }
+}
+
+@media screen and (min-width: 620px) {
+
+}
+
+@media screen and (min-width: 720px) {
+  .header {
+    padding: 60px 100px 40px;
+  }
+
+  .logo { 
+    width: 240px;
+    height:80px;
+  }
+  .menu-btn {
+    display: none;
+  }
+
+  #menu {
+    display: block;
+    text-align: center;
+  }
+
+  #menu ul li{
+    display: inline;
+    margin: 0 10px;
+    font-size: 0.9em;
+  }
+
+  #menu ul{
+    margin: 20px 0;
+  }
+
+  h1.intro {
+    display: block;
+    font-size: 45px;
+    line-height: 1.1;
+    font-weight: normal;
+    margin-bottom: 24px;
+  }
+
+  .section {
+    padding: 0 100px 40px;
+  }
+
+  .pencil {
+    display: block;
+  }
+
+  .pencil-one, .pencil-two{
+    position: absolute;
+    width: 300px;
+    height: 31px;
+    top:12px;
+  }
+
+  .pencil-one{
+    right: -180px;
+  }
+
+  .pencil-two{
+    left: -258px;
+  }
+
+  h1.intro {
+    display: block;
+    font-size: 50px;
+    line-height: 1.1;
+    font-weight: normal;
+    margin-bottom: 24px;
+  }
+
+  p{
+    font-size: 1.3em;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+    margin-bottom: 20px;
+    max-width: 520px;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  h1.intro {
+    font-size: 60px;
+  }
+  .logo { 
+    position: absolute;
+    top:125px;
+    left: 100px;
+    margin: 0;
+    padding: 0;
+    background-position: left center;
+    float: left;
+    width: 240px;
+    height:80px;
+  }
+  .menu-btn {
+    display: none;
+  }
+
+  #menu {
+    position: absolute;
+    top:127px;
+    right:100px;
+    display: block;
+    text-align: right;
+  }
+
+  #menu ul li{
+    margin: 0 10px;
+    font-size: 1.1em;
+  }
+
+  .pencil-one, .pencil-two{
+    position: absolute;
+    width: 430px;
+    height: 44px;
+    top:12px;
+  }
+
+  .pencil-one{
+    right: -300px;
+  }
+
+  .pencil-two{
+    left: -372px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header{
+    padding: 60px 140px 40px;
+  }
+  .logo{
+    left:140px;
+  }
+  #menu{
+    right:140px;
+  }
+  .section {
+    padding: 0 140px 40px;
+  }
+
+  .pencil-one, .pencil-two{
+    top:15px;
+  }
+
+  .pencil-one{
+    right: -300px;
+  }
+
+  .pencil-two{
+    left: -346px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+
+}
