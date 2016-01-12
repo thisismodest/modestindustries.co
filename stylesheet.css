@@ -24,12 +24,17 @@ time, mark, audio, video {
     background: transparent;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
 }
 
 a:hover, a:visted {
@@ -60,7 +65,7 @@ p {
   overflow: hidden;
 }
 
-.header{
+#header{
   position: relative;
   padding: 36px 30px;
   overflow: hidden;
@@ -75,7 +80,7 @@ p {
 
 .section{
   position: relative;
-  padding: 0 20px 20px;
+  overflow: hidden;
 }
 
 .logo{
@@ -90,6 +95,30 @@ p {
   background-repeat: no-repeat;
   background-size: 100%;
   */
+}
+
+#menu {
+  position: absolute;
+  top:50%;
+  right: 30px;
+  width: auto;
+  max-width: 80%; 
+  margin-top: -6px;
+
+  -o-transform: translateY(-50%); /* Opera */
+  -ms-transform: translateY(-50%); /* IE 9 */
+  -moz-transform: translateY(-50%); /* Firefox */
+  -webkit-transform: translateY(-50%); /* Safari */
+  transform: translateY(-50%);
+
+  display: none;
+}
+
+#menu li {
+  display: inline-block;
+  margin-left:20px;
+  text-align: right;
+  margin-bottom:4px; 
 }
 
 .menu-btn {
@@ -134,7 +163,21 @@ h1.intro-title {
 }
 
 img.intro-image{
+  display: block;
   margin:10px auto;
+}
+
+.text {
+  width: 80%;
+  max-width: 600px;
+  margin:0 auto;
+
+  padding-bottom: 40px;
+  margin-bottom: 60px;
+}
+
+.col1, .col2 {
+  width:100%;
 }
 
 .content-box{
@@ -146,6 +189,24 @@ img.intro-image{
   display: none;
 }
 
+/* FOOTER */
+.footer {
+  width: 100%;
+  text-align: center;
+}
+
+.to-top img {
+  width:30px;
+  height:30px;
+  padding:80px 0 130px;
+}
+
+.footer-logo {
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+}
+
 
 /* ==============================
              TYPOGRAPHY
@@ -154,16 +215,18 @@ body{
   font-family: 'Georgia', Georgia, Times, 'Times New Roman', serif;
   font-size: 16px;
   letter-spacing: 1px;
-  line-height: 1.2;
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6,
-#menu, .menu-btn, #menu-drop li {
+#menu, .menu-btn, #menu-drop li,
+.footer-copyright {
   font-family:'Open Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  line-height: 1.2;
 }
 
 h1 {
@@ -175,14 +238,31 @@ h1.intro-title {
   margin-bottom: 8px;
 }
 
+h2 {
+  letter-spacing: 1.3px;
+  font-size: 0.8em;
+}
+
+h2::after,
+.footer-copyright::after{
+  display: block;
+  margin: 12px auto 24px;
+  content:" ";
+  width:30px;
+  height:2px;
+}
+
 p{
-  font-size: 1em;
-  line-height: 1.4;
+  font-size: 0.8em;
   letter-spacing: 0.5px;
 }
 
 p.intro-subtitle{
   text-align: center;
+}
+
+p.col1, p.col2 {
+  margin-bottom: 20px;
 }
 
 .menu-btn{
@@ -192,13 +272,26 @@ p.intro-subtitle{
 
 #menu-drop li {
   text-align: center;
-  font-size:1em;
+  font-size:0.8em;
 }
 
-a {
-  text-decoration: none;
+#menu ul {
+  text-align: right;
 }
 
+#menu li {
+  font-size: 0.7em;
+}
+
+#menu li a:hover,
+#menu-drop li a:hover {
+  padding-bottom:1px;
+}
+
+.footer-copyright {
+  font-size: 0.6em;
+  margin:40px 0;
+}
 
 
 /* ==============================
@@ -214,8 +307,19 @@ body{
 
 h1, h2, h3, h4, h5, h6,
 a,
-.menu-btn, #menu-drop li{
+.menu-btn, #menu-drop li,
+.footer-copyright {
   color: #111111;
+}
+
+h2::after,
+.footer-copyright::after{
+  background-color:#EEE;
+}
+
+#menu li a:hover,
+#menu-drop li a:hover {
+  border-bottom:3px solid black;
 }
 
 #menu-drop {
@@ -223,6 +327,12 @@ a,
   border-top:1px solid #EEE;
   border-bottom:1px solid #EEE;
 }
+
+.section {
+  border-bottom:1px solid #EEE;
+}
+
+
 
 
 
@@ -262,9 +372,37 @@ a,
 
 @media screen and (min-width: 420px) {
 
+
 }
 
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 660px) {
+
+  /* Hide dropdown menu and show main menu */
+
+  .menu-btn {
+    display: none;
+  }
+
+  #menu {
+    display: block;
+    float: right;
+  }
+
+  .hide-drop-menu{
+    display:none;
+  }
+
+  .text {
+    width: 600px;
+  }
+  .col2 {
+    width: 48%;
+    float: left;
+  }
+
+  .col2:nth-child(even){
+    float: right;
+  }
 
 }
 
