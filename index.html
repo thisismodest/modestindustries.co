@@ -14,34 +14,37 @@
   <body>
     <div class="container">
       <div class="header">
-        <div class="logo banner"></div>
-        <div class="menu-btn" onclick="toggleMenu()">MENU</div>
-        <div id="menu">
-          <ul>
-            <li><a class="red" href="#">HOME</a></li>
-            <li><a class="green" href="#">PORTFOLIO</a></li>
-            <li><a class="orange" href="#">STUDIO</a></li>
-            <li><a class="blue" href="#">WORKFORCE</a></li>
-            <li><a class="pink" href="#">CONTACT</a></li>
-          </ul>
+        <div class="logo banner">
+          <a href="#">
+            <!-- <svg width="90" height="36">
+              <image xlink:href="img/modest-industries-banner-logo.svg" src="img/modest-industries-banner-logo.png" width="90" height="36" />
+            </svg> -->
+
+          <img src="img/modest-industries-banner-logo.png" alt="Modest Industries Logo"></a>
         </div>
+        <div class="menu-btn" onclick="toggleMenu()">MENU<img id="menu-close-x" src="img/x.png" alt="Close Menu"/></div>
       </div>
 
-      <div class="main">
-        
-        <div class="section">
-          <div class="pencil">
-            <img class="pencil-one" src="img/pencil.svg"/>
-            <img class="pencil-two" src="img/pencil.svg"/>
-          </div>
-          <h1 class="intro">Working with you to<br>create something to share</h1>
-          <p>
-            We don't believe in inflated egos, repetitive buzzwords and pointless endeavors. We believe in good ideas, beautiful design and elegant code.
-          </p>
-          <p>
-            Modest is perfect to give the little guy a big image and big corporate a little personality.
-          </p>
-        </div>
+      <!-- Dropdown menu -->
+      <div id="menu-drop">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">PORTFOLIO</a></li>
+          <li><a href="#">STUDIO</a></li>
+          <li><a href="#">WORKFORCE</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </div>
+
+    <!-- Main Content -->
+     <div class="main">
+
+      <h1 class="intro-title">Being Modest</h1>
+      <p class="intro-subtitle">
+        Hello. Welcome to Modest Industries.
+      </p>
+      <img src="img/placeholder-crab.jpg" class="intro-image">
+
 
         <div class="section">
           <div class="content-box">
@@ -62,15 +65,18 @@
     <script>
 
       var menuOpen = false;
-      var menu = document.getElementById('menu');
+      var menu_drop = document.getElementById('menu-drop');
+      var menu_x = document.getElementById('menu-close-x');
 
       function toggleMenu(){ 
         if (!menuOpen) {
-          menu.style.display="block";
+          menu_drop.style.display="block";
+          menu_x.style.display="block";
           menuOpen = true;
           console.log("Menu opened");
         } else {
-          menu.style.display="none";
+          menu_drop.style.display="none";
+          menu_x.style.display="none";
           console.log("Menu closed");
           menuOpen = false;
         }
