@@ -60,7 +60,7 @@ p {
    ============================== */
 .container {
   min-height: 100%;
-  max-width: 1337px;
+  max-width: 1280px;
   margin: auto;
   overflow: hidden;
 }
@@ -102,7 +102,7 @@ p {
   top:50%;
   right: 30px;
   width: auto;
-  max-width: 80%; 
+  max-width: 74%; 
   margin-top: -6px;
 
   -o-transform: translateY(-50%); /* Opera */
@@ -235,7 +235,7 @@ h1 {
 }
 
 h1.intro-title {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 h2 {
@@ -289,8 +289,9 @@ p.col1, p.col2 {
 }
 
 .footer-copyright {
-  font-size: 0.6em;
-  margin:40px 0;
+  max-width: 80%;
+  font-size: 0.5em;
+  margin:40px auto 60px;
 }
 
 
@@ -332,7 +333,9 @@ h2::after,
   border-bottom:1px solid #EEE;
 }
 
-
+.text p a:hover {
+  border-bottom:2px solid #111111;
+}
 
 
 
@@ -372,11 +375,27 @@ h2::after,
 
 @media screen and (min-width: 420px) {
 
+  /* Resize logo */
+  .banner {
+    width: 100px;
+    height: 40px;
+  }
+
+  .footer-copyright {
+    font-size: 0.6em;
+  }
 
 }
 
 @media screen and (min-width: 660px) {
 
+  #header {
+    padding: 50px 40px;
+  }
+
+  #menu {
+    right: 40px;
+  }
   /* Hide dropdown menu and show main menu */
 
   .menu-btn {
@@ -393,7 +412,7 @@ h2::after,
   }
 
   .text {
-    width: 600px;
+    max-width: 600px;
   }
   .col2 {
     width: 48%;
@@ -404,9 +423,35 @@ h2::after,
     float: right;
   }
 
+  /* Resize logo */
+  .banner {
+    width:120px;
+    height:48px;
+  }
+
+  .footer-copyright {
+    max-width: 520px;
+  }
+
 }
 
 @media screen and (min-width: 720px) {
+  body {
+    font-size: 18px;
+  }
+
+  h1.intro-title {
+    font-size: 1.8em;
+    margin-bottom: 4px;
+  }
+
+  p.intro-subtitle{
+    font-size: 0.9em;
+  }
+
+  .text {
+    max-width: 700px;
+  }
 
 }
 
