@@ -81,6 +81,11 @@ p {
 .section{
   position: relative;
   overflow: hidden;
+  width: 80%;
+  max-width: 600px;
+  margin:0 auto;
+  padding-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .logo{
@@ -168,16 +173,14 @@ img.intro-image{
 }
 
 .text {
-  width: 80%;
-  max-width: 600px;
-  margin:0 auto;
 
-  padding-bottom: 40px;
-  margin-bottom: 60px;
 }
+
+/* Columns */
 
 .col1, .col2 {
   width:100%;
+  overflow: hidden;
 }
 
 .content-box{
@@ -338,30 +341,33 @@ h2::after,
 }
 
 
+/* ==============================
+             SECTIONS
+   ============================== */
 
-.red{
-  color: #ff6666;
+/*.service {
+  border-bottom:none;
+  padding-bottom: 0;
+  margin-bottom: 60px;
+}
+*/
+
+.product {
+  /*border-bottom:none;*/
+  padding-bottom: 0;
+  margin-bottom: 40px;
 }
 
-.green{
-  color: #22b573;
+.product-image {
+  display: block;
+  margin-bottom:40px;
 }
 
-.yellow{
-  color: #fcee21;
+.product .col2{
+  margin-bottom: 60px;
 }
 
-.pink{
-  color: #ff7bac;
-}
 
-.orange{
-  color: #f7931e;
-}
-
-.blue{
-  color: #1691d6;
-}
 
 
 
@@ -414,13 +420,26 @@ h2::after,
   .text {
     max-width: 600px;
   }
+
   .col2 {
     width: 48%;
     float: left;
   }
 
-  .col2:nth-child(even){
+  .text .col2:last-child{
     float: right;
+  }
+
+  .product-box{
+    margin-bottom: 20px;
+  }
+
+  .product-box:nth-child(even){  
+    float: right;
+  }
+
+  .product-box:nth-child(odd){  
+    clear: both;
   }
 
   /* Resize logo */
@@ -449,7 +468,7 @@ h2::after,
     font-size: 0.9em;
   }
 
-  .text {
+  .section{
     max-width: 700px;
   }
 
