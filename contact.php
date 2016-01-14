@@ -16,7 +16,7 @@
     <div class="container">
       <div id="header">
         <div class="logo banner">
-          <a href="#">
+          <a href="index.html">
             <!-- <svg width="90" height="36">
               <image xlink:href="img/modest-industries-banner-logo.svg" src="img/modest-industries-banner-logo.png" width="90" height="36" />
             </svg> -->
@@ -27,8 +27,8 @@
         
         <div id="menu">
           <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="contact.php">CONTACT</a></li>
             <li><a href="#">SHOWCASE</a></li>
             <li><a href="services.html">SERVICES</a></li>
             <li><a href="#">OUR PEOPLE</a></li>
@@ -43,8 +43,8 @@
       <div class="hide-drop-menu">
         <div id="menu-drop">
           <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="contact.php">CONTACT</a></li>
             <li><a href="#">SHOWCASE</a></li>
             <li><a href="services.html">SERVICES</a></li>
             <li><a href="#">OUR PEOPLE</a></li>
@@ -57,12 +57,12 @@
     <!-- Main Content -->
       <div class="main">
 
+        <?php $action=$_REQUEST['action']; if ($action=="") { /* create form */?>
         <h1 class="intro-title">Contact</h1>
         <p class="intro-subtitle">
           Let's talk. It's good for the soul.
         </p>
         <img src="img/placeholder-crab.jpg" class="intro-image">
-
 
         <div class="section text">
           <h2 class="col1">Modest</h2>
@@ -71,13 +71,15 @@
         </div>
 
 
-        <div class="section contact">
-        <h2 class="col1">Use the beautiful form below to contact us</h2>
-          <form id="form" action="#" method="post">        
+        <div id="contact-us"class="section contact"> 
+
+            <h2 class="col1">Use the beautiful form below to contact us</h2>
+            <form id="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="action" value="submit">
 
             <div>
               <label for='name'>Name</label>
-              <input type='text' name='name' placeholder="What do we call you?" required />
+              <input type='text' name='name' placeholder="What do we call you?"  />
             </div>
 
             <div>
@@ -87,7 +89,7 @@
 
             <div>
               <label for='email'>Email</label>
-              <input type='email' name='email' placeholder='you@yourdomain.com' required />
+              <input type='email' name='email' placeholder='you@yourdomain.com'  />
             </div>
 
             <div>
@@ -97,7 +99,7 @@
 
             <div>
               <label for='message'>Message</label>
-              <textarea name='message' placeholder='Go ahead...' required></textarea>
+              <textarea name='message' placeholder='Go ahead...' ></textarea>
             </div>
 
             <div>
@@ -105,6 +107,24 @@
             </div>
 
           </form>
+
+          <?php } else { /* check required fields are filled */
+            $name=$_REQUEST['name'];
+            $tel=$_REQUEST['tel'];
+            $email=$_REQUEST['email'];
+            $url=$_REQUEST['url'];
+            $message=$_REQUEST['message'];
+            if (($name=="")||($email=="")||($message=="")) { /* show form error page */
+              echo "<div class='section'><br><h2>The 'Name', 'Email' and 'Message' fields are required</h2><p style='text-align:center;'>Please <a style='border-bottom:2px solid black;' href=\"\">click here</a> and fill out the form again.</p><br></div>";
+            } else { /* show thank you */
+                $from="From: $name<$email>\r\nReturn-path: $email";
+                $subject="Modest Contact Form";
+                $message="$message\n\n$name\n<$email>\n$tel\n\nSent via the Modest Contact Form";
+                mail("hello@modestindustries.co", $subject, $message, $from);
+                echo "<h1 class='intro-title'>Thank You</h1><p class='intro-subtitle'>Your message has been sent. We'll get back to you as soon as we possibly can.</p><img class='intro-image' src='img/postbox.jpg'>";
+                }
+            }  
+            ?>
 
         </div>
             

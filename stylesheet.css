@@ -54,6 +54,10 @@ p {
   max-width: 100%;
 }
 
+.main-button {
+  display: block;
+  width: 98%;
+}
 
 /* ==============================
               LAYOUT
@@ -225,13 +229,21 @@ body, input, textarea{
 
 h1, h2, h3, h4, h5, h6,
 #menu, .menu-btn, #menu-drop li,
-.footer-copyright, #form, button {
+.footer-copyright, #form, button,
+.main-button {
   font-family:'Open Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   line-height: 1.2;
 }
+
+.main-button {
+  padding:20px 0;
+  margin:30px auto;
+  text-align: center;
+}
+
 
 button{
   font-size: 1.2em;
@@ -260,7 +272,7 @@ h2::after,
   height:2px;
 }
 
-p{
+p, .main-button {
   font-size: 0.8em;
   letter-spacing: 0.5px;
 }
@@ -352,6 +364,20 @@ h2::after,
 }
 
 
+.main-button {
+  border: 1px solid #eee;
+}
+
+.main-button:hover{
+  background-color: #f1f1f1;
+  color:#111;
+}
+
+.broken {
+  pointer-events:none;
+  color:#ccc;
+}
+
 /* ==============================
              SECTIONS
    ============================== */
@@ -360,13 +386,13 @@ h2::after,
   border-bottom:none;
   padding-bottom: 0;
   margin-bottom: 60px;
-}
-*/
+}*/
+
 
 .product {
-  /*border-bottom:none;*/
+  border-bottom:none;
   padding-bottom: 0;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .product-image {
@@ -442,6 +468,31 @@ span.required {
   font-size: 0.8em;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+
+
+/* ==============================
+           CSS ANIMATION
+   ============================== */
+
+/*textarea {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  outline: none;
+}
+ 
+#form textarea:focus {
+  background-color: black;
+  color:white;
+}*/
 
 
 
@@ -508,6 +559,17 @@ span.required {
 
   .product-box{
     margin-bottom: 20px;
+    min-height:650px;
+  }
+
+  .product-box p {
+    margin-bottom:90px;
+  }
+
+  .main-button{
+    position: absolute;
+    bottom:0;
+    margin-bottom:0;
   }
 
   .product-box:nth-child(even){  
