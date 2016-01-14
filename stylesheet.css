@@ -14,7 +14,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, button, textarea {
     margin: 0;
     padding: 0;
     border: 0;
@@ -179,6 +179,7 @@ img.intro-image{
 /* Columns */
 
 .col1, .col2 {
+  position: relative;
   width:100%;
   overflow: hidden;
 }
@@ -214,7 +215,7 @@ img.intro-image{
 /* ==============================
              TYPOGRAPHY
    ============================== */
-body{
+body, input, textarea{
   font-family: 'Georgia', Georgia, Times, 'Times New Roman', serif;
   font-size: 16px;
   letter-spacing: 1px;
@@ -224,12 +225,16 @@ body{
 
 h1, h2, h3, h4, h5, h6,
 #menu, .menu-btn, #menu-drop li,
-.footer-copyright {
+.footer-copyright, #form, button {
   font-family:'Open Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   line-height: 1.2;
+}
+
+button{
+  font-size: 1.2em;
 }
 
 h1 {
@@ -298,6 +303,12 @@ p.col1, p.col2 {
 }
 
 
+input, textarea {
+  font-size: 0.8em;
+  line-height: 1.4;
+  letter-spacing: 0.5;
+}
+
 /* ==============================
                COLOUR
    ============================== */
@@ -312,7 +323,7 @@ body{
 h1, h2, h3, h4, h5, h6,
 a,
 .menu-btn, #menu-drop li,
-.footer-copyright {
+.footer-copyright, #form {
   color: #111111;
 }
 
@@ -367,6 +378,69 @@ h2::after,
   margin-bottom: 60px;
 }
 
+.service h2{
+  padding-top: 40px;
+}
+
+.service h2:first-child{
+  padding-top: 0;
+}
+
+
+/* Contact Form */
+
+#form {
+  max-width:500px;
+  margin:0 auto;
+}
+
+#form p {
+  text-align: center;
+}
+
+#form div {
+  margin:40px 0;
+}
+
+#form input, textarea, button {
+  width:100%;
+  padding:10px 0;
+
+  text-align: center;
+
+  border: none;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+}
+
+#form textarea {
+  height:100px;
+  max-width: 100%;
+}
+
+#form label {
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#form button {
+  cursor:pointer;
+  border:0;
+  background-color: #fff;
+}
+
+#form button:hover {
+}
+
+span.required {
+  color:#dd6666;
+  font-size: 0.5em;
+}
+
+#form label {
+  font-size: 0.8em;
+}
 
 
 
@@ -430,6 +504,8 @@ h2::after,
     float: right;
   }
 
+  /* Sections */
+
   .product-box{
     margin-bottom: 20px;
   }
@@ -440,6 +516,14 @@ h2::after,
 
   .product-box:nth-child(odd){  
     clear: both;
+  }
+
+  .col-image:nth-child(odd){
+    float: right;
+  }
+
+  .col-text:nth-child(odd){
+    float: right;
   }
 
   /* Resize logo */
