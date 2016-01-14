@@ -125,7 +125,7 @@ p {
 
 #menu li {
   display: inline-block;
-  margin-left:20px;
+  margin-left:6px;
   text-align: right;
   margin-bottom:4px; 
 }
@@ -300,7 +300,7 @@ p.col1, p.col2 {
 }
 
 #menu li {
-  font-size: 0.7em;
+  font-size: 0.65em;
 }
 
 #menu li a:hover,
@@ -524,24 +524,6 @@ button:focus {
     padding: 50px 40px;
   }
 
-  #menu {
-    right: 40px;
-  }
-  /* Hide dropdown menu and show main menu */
-
-  .menu-btn {
-    display: none;
-  }
-
-  #menu {
-    display: block;
-    float: right;
-  }
-
-  .hide-drop-menu{
-    display:none;
-  }
-
   .text {
     max-width: 600px;
   }
@@ -618,9 +600,38 @@ button:focus {
     max-width: 700px;
   }
 
+  .menu-btn{
+    font-size: 0.8em;
+    letter-spacing: 0.8px;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  #menu {
+    right: 40px;
+  }
+  /* Hide dropdown menu and show main menu */
+
+  .menu-btn {
+    display: none;
+  }
+
+  #menu {
+    display: block;
+    float: right;
+  }
+
+  .hide-drop-menu{
+    display:none;
+  }
 }
 
 @media screen and (min-width: 980px) {
+
+  #menu li {
+    font-size: 0.8em;
+    margin-left: 16px;
+  }
 
 }
 
