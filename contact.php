@@ -30,13 +30,14 @@ if ($action=="") { /* conditional to check if form has been submitted */
 <div id="contact-us"class="section contact"> 
 
   <h2 class="col1">Use the beautiful form below to contact us</h2>
+  <p class="col1" style="text-align:center;">Your name, email and message are the only requirements.</p>
 
   <form id="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="action" value="submit">
 
     <div>
       <label for='name'>Name</label>
-      <input type='text' name='name' placeholder="What do we call you?" required />
+      <input type='text' name='name' placeholder="What do we call you?"  />
     </div>
 
     <div>
@@ -46,7 +47,7 @@ if ($action=="") { /* conditional to check if form has been submitted */
 
     <div>
       <label for='email'>Email</label>
-      <input type='email' name='email' placeholder="What's your email address?" required />
+      <input type='email' name='email' placeholder="What's your email address?"  />
     </div>
 
     <div>
@@ -56,7 +57,7 @@ if ($action=="") { /* conditional to check if form has been submitted */
 
     <div>
       <label for='message'>Message</label>
-      <textarea name='message' placeholder='Go ahead...' required ></textarea>
+      <textarea name='message' placeholder='Go ahead...'  ></textarea>
     </div>
 
     <div>
@@ -66,14 +67,28 @@ if ($action=="") { /* conditional to check if form has been submitted */
   </form>
 </div>
 
-<?php } else { /* check required fields are filled */
+<?php 
+  include 'footer.php';
+
+  } else { /* check required fields are filled */
   $name=$_REQUEST['name'];
   $tel=$_REQUEST['tel'];
   $email=$_REQUEST['email'];
   $url=$_REQUEST['url'];
   $message=$_REQUEST['message'];
   if (($name=="")||($email=="")||($message=="")) { /* show form error page */
-    echo "<div class='section'><br><h2>The 'Name', 'Email' and 'Message' fields are required</h2><p style='text-align:center;'>Please <a style='border-bottom:2px solid black;' href=\"\">click here</a> and fill out the form again.</p><br></div>";
+
+    $site_title = "Uh Oh!";
+    $intro_title = "Uh oh!";
+    $intro_description = "<em>'Name'</em>, <em>'Email'</em> and <em>'Message'</em> are required fields. Please <a style='border-bottom:2px solid black;' href='javascript:window.location.href=window.location.href'>click here</a> and fill out the form again.";
+
+    /* NEEDS 'BACK TO CONTACT FORM' HREF LINK  ^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+    $intro_img_url = "postbox.jpg"; /* NEEDS ERROR IMAGE */
+    $intro_img_alt = "UH OH!";
+
+    include 'header.php';
+
   } else { /* show thank you */
     $from="From: $name<$email>\r\nReturn-path: $email";
     $subject="Modest Contact Form";
@@ -85,11 +100,10 @@ if ($action=="") { /* conditional to check if form has been submitted */
     $intro_title = "Thank You!";
     $intro_description = "Your message has been sent. We'll get back to you as soon as we possibly can.";
 
-    $intro_img_url = "postbox.jpg";
-    $intro_img_alt = "IT'S A POSTBOX!";
+    $intro_img_url = "postbox.jpg"; /* NEEDS MESSAGE SENT IMAGE */
+    $intro_img_alt = "IT'S A POSTBOX!"; 
 
     include 'header.php';
+    include 'footer.php';
     }
-  }  
-
-include 'footer.php'; ?>
+  } ?>

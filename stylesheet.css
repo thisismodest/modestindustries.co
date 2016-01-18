@@ -24,6 +24,11 @@ time, mark, audio, video, button, textarea {
     background: transparent;
 }
 
+input, textarea, select, button {
+   -webkit-appearance: none;
+   border-radius: 0;
+}
+
 ul {
   list-style: none;
 }
@@ -126,7 +131,7 @@ p {
 
 #menu li {
   display: inline-block;
-  margin-left:6px;
+  margin-left:10px;
   text-align: right;
   margin-bottom:4px; 
 }
