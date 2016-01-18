@@ -1,154 +1,95 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="favicon.png">
+<?php
+$page_id = "contact";
+$site_title = "Contact";
 
-    <title>Contact | Modest Industries Ltd</title>
+$meta_description = "Looking to chat with Modest? This is the page you're looking for.";
+$meta_keywords = "modest industries, modest, digital agency, social design, design, web development, html5 banners, development, banners, social campaigns, GreenSock, idea generation, contact form";
 
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
+$custom_css = "";
+$custom_scripts = "";
 
-  </head>
-  <body>
-    <div class="container">
-      <div id="header">
-        <div class="logo banner">
-          <a href="index.html">
-            <!-- <svg width="90" height="36">
-              <image xlink:href="img/modest-industries-banner-logo.svg" src="img/modest-industries-banner-logo.png" width="90" height="36" />
-            </svg> -->
+$action=$_REQUEST['action']; 
 
-          <img src="img/modest-industries-banner-logo.png" alt="Modest Industries Logo"></a>
-        </div>
-        <div class="menu-btn" onclick="toggleMenu()">MENU<img id="menu-close-x" src="img/x.png" alt="Close Menu"/></div>
-        
-        <div id="menu">
-          <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="contact.php">CONTACT</a></li>
-            <li><a href="#">SHOWCASE</a></li>
-            <li><a href="services.html">SERVICES</a></li>
-            <li><a href="#">OUR PEOPLE</a></li>
-            <li><a href="products.html">PRODUCTS</a></li>
-            <li><a href="#">STUDIO</a></li>
-          </ul>
-        </div>
+if ($action=="") { /* conditional to check if form has been submitted */
 
-      </div>
+  $intro_title = "Contact Modest";
+  $intro_description = "Let's talk. It's good for the soul";
 
-      <!-- Dropdown menu -->
-      <div class="hide-drop-menu">
-        <div id="menu-drop">
-          <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="contact.php">CONTACT</a></li>
-            <li><a href="#">SHOWCASE</a></li>
-            <li><a href="services.html">SERVICES</a></li>
-            <li><a href="#">OUR PEOPLE</a></li>
-            <li><a href="products.html">PRODUCTS</a></li>
-            <li><a href="#">STUDIO</a></li>
-          </ul>
-        </div>
-      </div>
+  $intro_img_url = "placeholder-crab.jpg";
+  $intro_img_alt = "Get in touch with Modest Industries";
 
-    <!-- Main Content -->
-      <div class="main">
+  include 'header.php'; ?>
 
-        <?php $action=$_REQUEST['action']; if ($action=="") { /* create form */?>
-        <h1 class="intro-title">Contact</h1>
-        <p class="intro-subtitle">
-          Let's talk. It's good for the soul.
-        </p>
-        <img src="img/placeholder-crab.jpg" class="intro-image">
-
-        <div class="section text">
-          <h2 class="col1">Modest</h2>
-          <p class="col2"> Bacon ipsum dolor amet spare ribs sirloin pancetta short ribs. Capicola boudin pork porky chop meatball filet mignon landjaeger meatloaf turkey beef ribs ball tip kielbasa cow ground round doner. Shankle tenderloin pork belly salami hamburger boudin.</p>
-          <p class="col2"> Bacon ipsum dolor amet spare ribs sirloin pancetta short ribs. Capicola boudin pork chop meatball filet mignon landjaeger meatloaf turkey beef ribs ball tip kielbasa cow ground round doner. Shankle tenderloin pork belly salami hamburger boudin.</p>
-        </div>
+<div class="section text">
+  <h2 class="col1">Modest</h2>
+  <p class="col2"> Bacon ipsum dolor amet spare ribs sirloin pancetta short ribs. Capicola boudin pork porky chop meatball filet mignon landjaeger meatloaf turkey beef ribs ball tip kielbasa cow ground round doner. Shankle tenderloin pork belly salami hamburger boudin.</p>
+  <p class="col2"> Bacon ipsum dolor amet spare ribs sirloin pancetta short ribs. Capicola boudin pork chop meatball filet mignon landjaeger meatloaf turkey beef ribs ball tip kielbasa cow ground round doner. Shankle tenderloin pork belly salami hamburger boudin.</p>
+</div>
 
 
-        <div id="contact-us"class="section contact"> 
+<div id="contact-us"class="section contact"> 
 
-            <h2 class="col1">Use the beautiful form below to contact us</h2>
-            <form id="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="action" value="submit">
+  <h2 class="col1">Use the beautiful form below to contact us</h2>
 
-            <div>
-              <label for='name'>Name</label>
-              <input type='text' name='name' placeholder="What do we call you?"  />
-            </div>
+  <form id="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="action" value="submit">
 
-            <div>
-              <label for='tel'>Phone</label>
-              <input type='tel' name='tel' placeholder='Enter your digits' />
-            </div>
-
-            <div>
-              <label for='email'>Email</label>
-              <input type='email' name='email' placeholder='you@yourdomain.com'  />
-            </div>
-
-            <div>
-              <label for='url'>Website</label>
-              <input type='url' name='website' placeholder='http://someawesomesite.com' />
-            </div>
-
-            <div>
-              <label for='message'>Message</label>
-              <textarea name='message' placeholder='Go ahead...' ></textarea>
-            </div>
-
-            <div>
-              <button type='submit'>Submit</button>
-            </div>
-
-          </form>
-
-          <?php } else { /* check required fields are filled */
-            $name=$_REQUEST['name'];
-            $tel=$_REQUEST['tel'];
-            $email=$_REQUEST['email'];
-            $url=$_REQUEST['url'];
-            $message=$_REQUEST['message'];
-            if (($name=="")||($email=="")||($message=="")) { /* show form error page */
-              echo "<div class='section'><br><h2>The 'Name', 'Email' and 'Message' fields are required</h2><p style='text-align:center;'>Please <a style='border-bottom:2px solid black;' href=\"\">click here</a> and fill out the form again.</p><br></div>";
-            } else { /* show thank you */
-                $from="From: $name<$email>\r\nReturn-path: $email";
-                $subject="Modest Contact Form";
-                $message="$message\n\n$name\n<$email>\n$tel\n\nSent via the Modest Contact Form";
-                mail("hello@modestindustries.co", $subject, $message, $from);
-                echo "<h1 class='intro-title'>Thank You</h1><p class='intro-subtitle'>Your message has been sent. We'll get back to you as soon as we possibly can.</p><img class='intro-image' src='img/postbox.jpg'>";
-                }
-            }  
-            ?>
-
-        </div>
-            
-      </div>
-
-
-
-      <div class="footer">
-        <div class="to-top">
-          <a href="#header" title="Back to top">
-            <img src="img/up-arrow.png">
-          </a>
-        </div>
-        <div class="footer-logo">
-          <img src="img/modest-industries-banner-logo.png">
-        </div>
-        <p class="footer-copyright">&copy; MODEST INDUSTRIES LTD • Company No. 09229917 • Registered in England &amp; Wales at Unit 11, Hove Business Centre, Hove, East Sussex, BN3 6HA</p>
-      </div>
-
+    <div>
+      <label for='name'>Name</label>
+      <input type='text' name='name' placeholder="What do we call you?" required />
     </div>
 
-    <script src="js/CSSPlugin.min.js"></script>
-    <script src="js/EasePack.min.js"></script>
-    <script src="js/TweenLite.min.js"></script>
-    <script src="js/app.js"></script>
-  </body>
-</html>
+    <div>
+      <label for='tel'>Phone</label>
+      <input type='tel' name='tel' placeholder='Enter your digits' />
+    </div>
+
+    <div>
+      <label for='email'>Email</label>
+      <input type='email' name='email' placeholder="What's your email address?" required />
+    </div>
+
+    <div>
+      <label for='url'>Website</label>
+      <input type='url' name='website' placeholder='http://' />
+    </div>
+
+    <div>
+      <label for='message'>Message</label>
+      <textarea name='message' placeholder='Go ahead...' required ></textarea>
+    </div>
+
+    <div>
+      <button type='submit'>Submit</button>
+    </div>
+
+  </form>
+</div>
+
+<?php } else { /* check required fields are filled */
+  $name=$_REQUEST['name'];
+  $tel=$_REQUEST['tel'];
+  $email=$_REQUEST['email'];
+  $url=$_REQUEST['url'];
+  $message=$_REQUEST['message'];
+  if (($name=="")||($email=="")||($message=="")) { /* show form error page */
+    echo "<div class='section'><br><h2>The 'Name', 'Email' and 'Message' fields are required</h2><p style='text-align:center;'>Please <a style='border-bottom:2px solid black;' href=\"\">click here</a> and fill out the form again.</p><br></div>";
+  } else { /* show thank you */
+    $from="From: $name<$email>\r\nReturn-path: $email";
+    $subject="Modest Contact Form";
+    $message="$message\n\n$name\n<$email>\n$tel\n\nSent via the Modest Contact Form";
+    mail("hello@modestindustries.co", $subject, $message, $from);
+
+    $site_title = "Thank You!";
+
+    $intro_title = "Thank You!";
+    $intro_description = "Your message has been sent. We'll get back to you as soon as we possibly can.";
+
+    $intro_img_url = "postbox.jpg";
+    $intro_img_alt = "IT'S A POSTBOX!";
+
+    include 'header.php';
+    }
+  }  
+
+include 'footer.php'; ?>
