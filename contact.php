@@ -37,7 +37,7 @@ if ($action=="") { /* conditional to check if form has been submitted */
 
     <div>
       <label for='name'>Name</label>
-      <input type='text' name='name' placeholder="What do we call you?"  />
+      <input type='text' name='name' placeholder="What do we call you?" required />
     </div>
 
     <div>
@@ -47,7 +47,7 @@ if ($action=="") { /* conditional to check if form has been submitted */
 
     <div>
       <label for='email'>Email</label>
-      <input type='email' name='email' placeholder="What's your email address?"  />
+      <input type='email' name='email' placeholder="What's your email address?" required />
     </div>
 
     <div>
@@ -57,7 +57,7 @@ if ($action=="") { /* conditional to check if form has been submitted */
 
     <div>
       <label for='message'>Message</label>
-      <textarea name='message' placeholder='Go ahead...'  ></textarea>
+      <textarea name='message' placeholder='Go ahead...' required ></textarea>
     </div>
 
     <div>
