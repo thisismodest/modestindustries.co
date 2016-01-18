@@ -25,17 +25,17 @@
     <?php $page_menu='
       <ul>
         <li>
-          <a href="index.php">HOME</a>
+          <a href="index">HOME</a>
         </li><li>
-          <a href="contact.php">CONTACT</a>
+          <a href="contact">CONTACT</a>
         </li><li>
           <a href="#">SHOWCASE</a>
         </li><li>
-          <a href="services.php">SERVICES</a>
+          <a href="services">SERVICES</a>
         </li><li>
-          <a href="hire-me.php">OUR PEOPLE</a>
+          <a href="hire-me">OUR PEOPLE</a>
         </li><li>
-          <a href="products.php">PRODUCTS</a>
+          <a href="products">PRODUCTS</a>
         </li><li>
           <a href="#">STUDIO</a>
         </li>
@@ -48,7 +48,7 @@
     <div class="container">
       <div id="header">
         <div class="logo banner">
-          <a href="index.php">
+          <a href="/">
           <img src="img/core/modest-industries-banner-logo.png" alt="Modest Industries Logo"></a>
         </div>
         <div class="menu-btn" onclick="toggleMenu()">MENU<img id="menu-close-x" src="img/core/x.png" alt="Close Menu"/></div>
