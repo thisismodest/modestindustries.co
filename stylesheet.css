@@ -60,10 +60,26 @@ p {
   max-width: 100%;
 }
 
+.multi-button {
+  display: block;
+}
+
 .main-button {
   display: block;
   width: 98%;
+  padding:20px 0;
+  margin:30px auto;
 }
+
+.multi-button {
+  padding:20px 0;
+  margin:30px auto 0;
+}
+
+.multi-button:nth-child(odd){
+  margin:14px auto 30px;
+}
+
 
 /* ==============================
               LAYOUT
@@ -237,20 +253,13 @@ body, input, textarea{
 h1, h2, h3, h4, h5, h6,
 #menu, .menu-btn, #menu-drop li,
 .footer-copyright, #form, button,
-.main-button {
+.main-button, .multi-button {
   font-family:'Open Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   line-height: 1.2;
 }
-
-.main-button {
-  padding:20px 0;
-  margin:30px auto;
-  text-align: center;
-}
-
 
 button{
   font-size: 1.2em;
@@ -279,7 +288,7 @@ h2::after,
   height:2px;
 }
 
-p, .main-button {
+p, .main-button, .multi-button {
   font-size: 0.8em;
   letter-spacing: 0.5px;
 }
@@ -371,11 +380,11 @@ h2::after,
 }
 
 
-.main-button {
+.main-button, .multi-button {
   border: 1px solid #eee;
 }
 
-.main-button:hover{
+.main-button:hover, .multi-button:hover{
   background-color: #f1f1f1;
   color:#111;
 }
@@ -523,6 +532,19 @@ button:focus {
     font-size: 0.6em;
   }
 
+  .multi-button:nth-child(odd){
+    margin:30px auto;
+  }
+
+  .btn2{
+    width:48%;
+    float: left;
+  }
+
+  .btn2:nth-child(odd){
+    float: right;
+  }
+
 }
 
 @media screen and (min-width: 660px) {
@@ -548,7 +570,7 @@ button:focus {
 
   .product-box{
     margin-bottom: 20px;
-    min-height:650px;
+    min-height:600px;
   }
 
   .product-box p {
@@ -561,19 +583,33 @@ button:focus {
     margin-bottom:0;
   }
 
-  .product-box:nth-child(even){  
+  .btn2{
+    position: absolute;
+    bottom: 0;
+    left:0;
+  }
+
+  .btn2:nth-child(odd){
+    left:auto;
+    right:0;
+    margin-bottom:0;
+  }
+
+
+
+  .product-box:nth-of-type(even){  
     float: right;
   }
 
-  .product-box:nth-child(odd){  
+  .product-box:nth-of-type(odd){  
     clear: both;
   }
 
-  .col-image:nth-child(odd){
+  .col-image:nth-of-type(even){
     float: right;
   }
 
-  .col-text:nth-child(odd){
+  .col-text:nth-of-type(odd){
     float: right;
   }
 
@@ -610,6 +646,10 @@ button:focus {
   .menu-btn{
     font-size: 0.8em;
     letter-spacing: 0.8px;
+  }
+
+  .product-box{
+    min-height:650px;
   }
 }
 

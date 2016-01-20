@@ -33,7 +33,7 @@
         </li><li>
           <a href="services">SERVICES</a>
         </li><li>
-          <a href="hire-me">OUR PEOPLE</a>
+          <a href="people">OUR PEOPLE</a>
         </li><li>
           <a href="products">PRODUCTS</a>
         </li><li>
