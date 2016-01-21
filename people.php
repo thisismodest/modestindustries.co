@@ -17,16 +17,16 @@ $custom_scripts = "";
 include 'header.php'; ?>
 
   <div class="section text">
-    <h2 class="col1">Modest</h2>
-    <p class="col2"> Bacon ipsum dolor amet spare ribs sirloin pancetta short ribs. Capicola boudin pork porky chop meatball filet mignon landjaeger meatloaf turkey beef ribs ball tip kielbasa cow ground round doner. Shankle tenderloin pork belly salami hamburger boudin.</p>
-    <p class="col2"> Bacon ipsum dolor amet spare ribs sirloin pancetta short ribs. Capicola boudin pork chop meatball filet mignon landjaeger meatloaf turkey beef ribs ball tip kielbasa cow ground round doner. Shankle tenderloin pork belly salami hamburger boudin.</p>
+    <h2 class="col1">The Power of People</h2>
+    <p class="col2">We pick our people based on a number of things (and yes, modesty <em>is</em> one of them). There's a fine balance of skill, personality and initiative that we look for when recruiting for Modest.</p>
+    <p class="col2">The fine humans below are our essence, each of them armed with their own particular set of skills they're like a turn-based card game. You could say they're our winning hand... #punderful</p>
   </div>
 
   <div class="section product">
     <div class="product-box col2">
       <img src="img/placeholder-phone.jpg" class="product-image">
       <h2>Marcus</h2>
-      <p>Marcus is the mutt who never found his place, but don't feel bad for him because in doing so he learned (and continues to learn) so so much, to the point where the only way he can continue to do all of the things he loves is by founding this place, Modest Industries, as his creative outlet. He gets to gallivant about making stuff and our clients get a passion that's not often seen. Win win.</p>
+      <p>Marcus has never really found his place, but don't feel bad for him because in looking for it he's worn a ton of hats and now knows what he loves he can do all the things he loves was by founding this place. Now he gets to gallivant about making stuff. Good for him, good for our clients who get a genuine passion.</p>
       <a href="http://twitter.com/marcusmichaels" alt="Follow Marcus on Twitter" class="multi-button btn2">Twitter</a>
       <a href="http://marcusmichaels.com" alt="Marcus' Website" class="multi-button btn2">Website</a>
 
