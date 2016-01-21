@@ -20,11 +20,11 @@ if ($action=="") { /* conditional to check if form has been submitted */
 
   include 'header.php'; ?>
 
-<div class="section text">
+<!-- <div class="section text">
   <h2 class="col1">Modest</h2>
   <p class="col2">We're a friendly bunch so there's really no reason not to talk to us. Maybe you need a little more convincing? Okay, keep reading. Maybe we can convince you. I mean, if you don't get in touch, we'll never know what could have been. Think about it; that little idea that popped up from that little email...</p>
   <p class="col2">That little chat, that little spark and POW we have a big idea! Let's grow this into something amazing. What's that? Our idea has grown up and is having babies?! Now we're talking about idea babies running around and when they grow up, dare I say it – world domination, and it all starts with a "Hey guys, what's up?".</p>
-</div>
+</div> -->
 
 
 <div id="contact-us"class="section contact"> 

@@ -598,6 +598,10 @@ button:focus {
     max-width: 600px;
   }
 
+  .col1 {
+    text-align: center;
+  }
+
   .col2 {
     width: 48%;
     float: left;
