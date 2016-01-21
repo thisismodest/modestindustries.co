@@ -1,4 +1,36 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600italic);
+@font-face {
+  font-family:'OS-400';
+  src: url('font/OS-400.eot');
+  src: url('font/OS-400.woff') format('woff'),
+    url('font/OS-400.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family:'OS-600';
+  src: url('font/OS-600.eot');
+  src: url('font/OS-600.woff') format('woff'),
+    url('font/OS-600.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family:'OS-700';
+  src: url('font/OS-700.eot');
+  src: url('font/OS-700.woff') format('woff'),
+    url('font/OS-700.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
 
 /* ==============================
               RESETS
@@ -93,7 +125,7 @@ p {
 
 #header{
   position: relative;
-  padding: 36px 30px;
+  padding: 36px 30px 25px;
   overflow: hidden;
 
   -webkit-touch-callout: none;
@@ -103,6 +135,7 @@ p {
   -ms-user-select: none;
   user-select: none;
 }
+
 
 .section{
   position: relative;
@@ -173,7 +206,6 @@ p {
 }
 
 #menu-drop {
-  /*margin-bottom:36px;*/
   display:none;
   overflow: hidden;
 }
@@ -186,6 +218,10 @@ p {
 #menu-drop li{
   display: block;
   margin: 10px 0;
+}
+
+.main{
+  margin-top:20px;
 }
 
 p.intro-subtitle,
@@ -252,13 +288,18 @@ body, input, textarea{
 
 h1, h2, h3, h4, h5, h6,
 #menu, .menu-btn, #menu-drop li,
-.footer-copyright, #form, button,
+#form, button, .footer-copyright,
 .main-button, .multi-button {
-  font-family:'Open Sans', sans-serif;
+  font-family:'OS-700', 'Open Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   line-height: 1.2;
+}
+
+.footer-copyright {
+  font-family:'OS-600', 'Open Sans', sans-serif;
+  font-weight: 600;
 }
 
 button{

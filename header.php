@@ -23,13 +23,11 @@
     <meta property="og:image" content="img/<?php echo $intro_img_url; ?>"/>
 
     <?php $page_menu='
-      <ul>
+      <ul id="header-menu-list">
         <li>
           <a href="index">HOME</a>
         </li><li>
           <a href="contact">CONTACT</a>
-        </li><li>
-          <a href="#">SHOWCASE</a>
         </li><li>
           <a href="services">SERVICES</a>
         </li><li>
@@ -37,7 +35,7 @@
         </li><li>
           <a href="products">PRODUCTS</a>
         </li><li>
-          <a href="#">STUDIO</a>
+          <a href="studio">STUDIO</a>
         </li>
       </ul>';
 
