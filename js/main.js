@@ -5,7 +5,7 @@ var menu_drop = document.getElementById('menu-drop');
 var menu_x = document.getElementById('menu-close-x');
 var header_menu_list = document.getElementById('header-menu-list');
 
-var open_menu_height = (header_menu_list.getElementsByTagName('li').length * 25) + 30; //top:10px + bottom:20px + li:25px
+var open_menu_height = (header_menu_list.getElementsByTagName('li').length * 26) + 30; //top:10px + bottom:20px + li:26px
 
 
 function toggleMenu(){ 

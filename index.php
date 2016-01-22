@@ -28,4 +28,6 @@ include 'header.php'; ?>
     <p class="col2">Modest Industries caters to businesses big and small working with family run shops to tech giants. Take a look around and if you like what you see, get in touch.</p>
   </div>
 
+    
+
 <?php include 'footer.php'; ?>

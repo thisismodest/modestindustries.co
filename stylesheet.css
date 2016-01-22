@@ -125,7 +125,6 @@ p {
   margin:14px auto 30px;
 }
 
-
 /* ==============================
               LAYOUT
    ============================== */
@@ -156,7 +155,7 @@ p {
   width: 80%;
   max-width: 600px;
   margin:0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 46px;
   margin-bottom: 60px;
 }
 
@@ -275,7 +274,7 @@ img.intro-image{
 .to-top img {
   width:30px;
   height:30px;
-  margin:80px auto 130px;
+  margin:140px auto;
 }
 
 .footer-logo {
@@ -447,6 +446,7 @@ h2::after,
   color:#ccc;
 }
 
+
 /* ==============================
              SECTIONS
    ============================== */
@@ -454,7 +454,6 @@ h2::after,
 .service {
   border-bottom:none;
 }
-
 
 .product {
   border-bottom:none;
@@ -542,7 +541,9 @@ button:focus {
   outline: none;
 }
 
-
+.no-border {
+  border:none;
+}
 
 /* ==============================
            CSS ANIMATION
@@ -617,7 +618,7 @@ button:focus {
     float: left;
   }
 
-  .text .col2:last-child{
+  .text .col2:nth-of-type(2){
     float: right;
   }
 
