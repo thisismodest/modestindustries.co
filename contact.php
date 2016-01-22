@@ -15,7 +15,7 @@ if ($action=="") { /* conditional to check if form has been submitted */
   $intro_title = "Contact Modest";
   $intro_description = "Let's talk. It's good for the soul";
 
-  $intro_img_url = "placeholder-crab.jpg";
+  $intro_img_url = "placeholder-pen.png";
   $intro_img_alt = "Get in touch with Modest Industries";
 
   include 'header.php'; ?>

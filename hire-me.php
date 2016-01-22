@@ -8,7 +8,7 @@ $meta_keywords = "modest industries, modest, digital agency, social design, desi
 $intro_title = "Vacancies";
 $intro_description = "Don't be busy, be productive.";
 
-$intro_img_url = "placeholder-crab.jpg";
+$intro_img_url = "placeholder-pen.png";
 $intro_img_alt = "Work with Modest";
 
 $custom_css = "";

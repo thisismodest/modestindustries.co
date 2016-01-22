@@ -8,7 +8,7 @@ $meta_keywords = "modest industries, modest, digital agency, social design, desi
 $intro_title = "Meet the Team";
 $intro_description = "Friendly faces with hearts of gold.";
 
-$intro_img_url = "placeholder-crab.jpg";
+$intro_img_url = "placeholder-pen.png";
 $intro_img_alt = "People by Modest Industries";
 
 $custom_css = "";
