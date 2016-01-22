@@ -101,11 +101,19 @@ p {
   display: block;
 }
 
-.main-button {
+.main-button, .cta-btn {
   display: block;
-  width: 98%;
   padding:20px 0;
   margin:30px auto;
+}
+
+.cta-btn{
+  margin-top:20px;
+}
+
+.clearfix{
+  content:" ";
+  clear:both;
 }
 
 .multi-button {
@@ -240,9 +248,6 @@ img.intro-image{
   margin:10px auto;
 }
 
-.text {
-
-}
 
 /* Columns */
 
@@ -294,7 +299,7 @@ body, input, textarea{
 h1, h2, h3, h4, h5, h6,
 #menu, .menu-btn, #menu-drop li,
 #form, button, .footer-copyright,
-.main-button, .multi-button {
+.main-button, .multi-button, .cta-btn {
   font-family:'OS-700', 'Open Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -334,7 +339,7 @@ h2::after,
   height:2px;
 }
 
-p, .main-button, .multi-button {
+p, .main-button, .multi-button, .cta-btn {
   font-size: 0.8em;
   letter-spacing: 0.5px;
 }
@@ -344,6 +349,7 @@ p.intro-subtitle{
 }
 
 p.col1, p.col2 {
+  margin-top:20px;
   margin-bottom: 20px;
 }
 
@@ -426,11 +432,12 @@ h2::after,
 }
 
 
-.main-button, .multi-button {
+.main-button, .multi-button, .cta-btn {
   border: 1px solid #eee;
+  box-sizing:border-box;
 }
 
-.main-button:hover, .multi-button:hover{
+.main-button:hover, .multi-button:hover, .cta-btn:hover{
   background-color: #f1f1f1;
   color:#111;
 }
@@ -444,11 +451,9 @@ h2::after,
              SECTIONS
    ============================== */
 
-/*.service {
+.service {
   border-bottom:none;
-  padding-bottom: 0;
-  margin-bottom: 60px;
-}*/
+}
 
 
 .product {
@@ -603,8 +608,8 @@ button:focus {
     max-width: 600px;
   }
 
-  .col1 {
-    text-align: center;
+  p.col1, p.col2 {
+    margin-top:0;
   }
 
   .col2 {
@@ -631,6 +636,7 @@ button:focus {
     position: absolute;
     bottom:0;
     margin-bottom:0;
+    left:0;right:0;
   }
 
   .btn2{
@@ -645,10 +651,9 @@ button:focus {
     margin-bottom:0;
   }
 
-
-
   .product-box:nth-of-type(even){  
     float: right;
+    clear:right;
   }
 
   .product-box:nth-of-type(odd){  
@@ -657,10 +662,12 @@ button:focus {
 
   .col-image:nth-of-type(even){
     float: right;
+    clear:right;
   }
 
   .col-text:nth-of-type(odd){
     float: right;
+    clear:right;
   }
 
   /* Resize logo */
