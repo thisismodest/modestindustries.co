@@ -155,8 +155,8 @@ p {
   width: 80%;
   max-width: 600px;
   margin:0 auto;
-  padding-bottom: 46px;
-  margin-bottom: 60px;
+  padding-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .logo{
@@ -348,7 +348,6 @@ p.intro-subtitle{
 }
 
 p.col1, p.col2 {
-  margin-top:20px;
   margin-bottom: 20px;
 }
 
