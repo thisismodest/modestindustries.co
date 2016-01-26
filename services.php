@@ -33,14 +33,14 @@ include 'header.php'; ?>
 
     <h2 class="col1">Web Development</h2>
     <div class="alt-box">
-      <img src="img/placeholder-phone.jpg" class="col2 col-image">
+      <img src="img/wireframe-notebook.png" class="col2 col-image">
       <p>You're an established business. You have customers. People are buying what you're selling. Maybe you're looking to grow your audience by giving them something bespoke to interactive with, or perhaps give your existing customers a better experience when they visit you online. We have the tools and the skills to create something engaging. It's a big world wide web out there so hit the button below and let's talk about how we can help your brand.</p>
     </div>
     <a class="cta-btn" href="contact">Let's Build Something</a>
 
     <h2 class="col1">Social Management</h2>
     <div class="alt-box">
-      <img src="img/placeholder-phone.jpg">
+      <img src="img/megaphone.png">
       <p>If you're not talking to your audience where they spend the majority of their time, someone else is. Every company needs a voice on social media. That's not to say you need to be everywhere all the time selling – the key is to be only where to need to and talk about only what's relevant. This isn't about sales (okay, it's all about sales but trust us on this), it's about brand loyalty and getting people talking about the things they're passionate about with your brand facilitating it.</p>
     </div>
     <a class="cta-btn" href="contact">Let's Socialise</a>

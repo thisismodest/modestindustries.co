@@ -697,7 +697,12 @@ button:focus {
 
   /* ALT-BOX (alternating box) for vertical alignment */
 
-  .alt-box p, .alt-box img{
+  .alt-box p{
+    width: 48%;
+    margin-bottom: 0;
+  }
+
+  .alt-box img{
     width: 48%;
     margin-bottom: 0;
   }
