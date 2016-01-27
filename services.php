@@ -8,7 +8,7 @@ $meta_keywords = "modest industries, modest, digital agency, social design, desi
 $intro_title = "Services";
 $intro_description = "Our offerings to help you out.";
 
-$intro_img_url = "placeholder-pen.png";
+$intro_img_url = "header-long-ruler.png";
 $intro_img_alt = "Services from Modest Industries";
 
 $custom_css = "";
@@ -47,21 +47,21 @@ include 'header.php'; ?>
 
     <h2 class="col1">Content Creation</h2>
     <div class="alt-box">
-      <img src="img/placeholder-phone.jpg">
+      <img src="img/gif/camera.gif">
       <p>Content is everything and everywhere and people love it. The key with content is to make something that people want to spend their time on. We work with video, photography and design to produce the content you need. It can be anything from an introduction video for your website, photo documentation of a new product launch all the way to social media posts and infographics. The options are endless – like we said – content <em>is</em> everywhere.</p>
     </div>
     <a class="cta-btn" href="contact">Let's Make Content</a>
 
     <h2 class="col1">Branding &amp; Design</h2>
     <div class="alt-box">
-      <img src="img/placeholder-phone.jpg">
+      <img src="img/gif/branding.gif">
       <p>We can work with your existing branding to create online and offline marketing materials, or lend some help on projects that need an extra pair of experienced hands. Maybe you're looking for something bigger. Your company has outgrown it's existing branding and you're looking to take it to the next level with a complete rebrand. We'd be happy to work with your refresh paying special attention to keeping audience awareness and brand reputation intact.</p>
     </div>
     <a class="cta-btn" href="contact">Let's Design Stuff</a>
 
     <h2 class="col1">Retainers</h2>
     <div class="alt-box">
-      <img src="img/placeholder-phone.jpg">
+      <img src="img/gif/calendar.gif">
       <p>We're happy to offer (in a very limited supply and on a first come first serve basis) a variety of bespoke retainers. If you're looking for an extra supply of design, development or content production, or maybe a fine mix of all three – we can customise and supply a monthly retainer to keep your business going without the worry of cumbersome overflow slowing you down.</p>
     </div>
     <a class="cta-btn" href="contact">Let's Grow Together</a>

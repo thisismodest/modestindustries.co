@@ -42,7 +42,7 @@
     echo $custom_css; ?>
 
   </head>
-  <body>
+  <body  onload="document.body.style.opacity='1'">
     <div class="container">
       <div id="header">
         <div class="logo banner">

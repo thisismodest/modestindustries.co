@@ -8,7 +8,7 @@ $meta_keywords = "modest industries, modest, digital agency, social design, desi
 $intro_title = "This is Modest";
 $intro_description = "Hello. Welcome to Modest Industries.";
 
-$intro_img_url = "equipment_v2.png";
+$intro_img_url = "header-pencil.png";
 $intro_img_alt = "Welcome to Modest Industries.";
 
 $custom_css = "";

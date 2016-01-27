@@ -823,3 +823,52 @@ button:focus {
 @media screen and (min-width: 1920px) {
 
 }
+
+
+
+
+
+
+/* CSS3 FADE IN TRANSITION */
+
+body {
+  opacity:0;
+  -webkit-transition: 0.3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-transition: 0.3s; /* Firefox < 16 */
+  -ms-transition: 0.3s; /* Internet Explorer */
+  -o-transition: 0.3s; /* Opera < 12.1 */
+  transition: 0.3s;
+}
+
+.animation{
+  -webkit-animation: fadein 2s;
+  -moz-animation: fadein 2s; 
+  -ms-animation: fadein 2s; 
+  -o-animation: fadein 2s; 
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
