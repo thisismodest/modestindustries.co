@@ -67,10 +67,11 @@
       </div>
 
     <!-- Main Content -->
-      <div class="main fadeIn">
-        <h1 class="intro-title"><?php echo $intro_title; ?></h1>
-        <p class="intro-subtitle"><?php echo $intro_description; ?></p>        
-        <img src="img/<?php echo $intro_img_url; ?>" alt="<?php echo $intro_img_alt; ?>" class="intro-image"/>
+      <div class="fadeIn">
+        <div class="main">
+          <h1 class="intro-title"><?php echo $intro_title; ?></h1>
+          <p class="intro-subtitle"><?php echo $intro_description; ?></p>        
+          <img src="img/<?php echo $intro_img_url; ?>" alt="<?php echo $intro_img_alt; ?>" class="intro-image"/>
 
 
 
