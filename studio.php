@@ -27,7 +27,7 @@ include 'header.php'; ?>
 
     <h2 class="col1">Photography Studio</h2>
     <div class="alt-box">
-      <img src="img/placeholder-phone.jpg">
+      <img src="img/gif/backdrop.gif">
       <p>Images speak a thousand words, but all we really want is to make someone smile. Our set up is capable of snapping anything that can fit through a door. People, products, animals (preferably cute and fluffy) and everything else we haven't thought of yet. Here's a fun fact; every photo on this website was produced by us.</p>
     </div>
 

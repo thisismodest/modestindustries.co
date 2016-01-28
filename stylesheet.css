@@ -343,6 +343,7 @@ h1.intro-title {
 h2 {
   letter-spacing: 1.3px;
   font-size: 0.8em;
+  z-index: 10;
 }
 
 h2::after,
@@ -703,7 +704,7 @@ button:focus {
   }
 
   .alt-box img{
-    width: 48%;
+    max-width: 48%;
     margin-bottom: 0;
   }
 
