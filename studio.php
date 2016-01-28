@@ -6,7 +6,7 @@ $meta_description = "Modest Industries is an awesome digital entity that does st
 $meta_keywords = "modest industries, modest, digital agency, social design, design, web development, html5 banners, development, banners, social campaigns, GreenSock, idea generation, concepts";
 
 $intro_title = "Studio";
-$intro_description = "The place we think, make and do.";
+$intro_description = "Where we learn from our mistakes.";
 
 $intro_img_url = "header-eraser.png";
 $intro_img_alt = "Studio equipment";

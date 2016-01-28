@@ -13,7 +13,7 @@ $action=$_REQUEST['action'];
 if ($action=="") { /* conditional to check if form has been submitted */
 
   $intro_title = "Contact Modest";
-  $intro_description = "Let's talk. It's good for the soul";
+  $intro_description = "Let's talk. It's good for the soul.";
 
   $intro_img_url = "header-cups.png";
   $intro_img_alt = "Get in touch with Modest Industries";

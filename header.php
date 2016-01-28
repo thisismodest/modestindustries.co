@@ -40,10 +40,16 @@
       </ul>';
 
     echo $custom_css; ?>
-
+   <noscript>
+    <style>
+      .fadeIn{opacity:1;}
+      #menu-drop{display:block;}
+    </style>
+    </noscript>
   </head>
-  <body  onload="document.body.style.opacity='1'">
-    <div class="container">
+
+  <body onload="fadeIn.style.opacity='1'">
+    <div id="container">
       <div id="header">
         <div class="logo banner">
           <a href="/">
@@ -61,7 +67,7 @@
       </div>
 
     <!-- Main Content -->
-      <div class="main">
+      <div class="main fadeIn">
         <h1 class="intro-title"><?php echo $intro_title; ?></h1>
         <p class="intro-subtitle"><?php echo $intro_description; ?></p>        
         <img src="img/<?php echo $intro_img_url; ?>" alt="<?php echo $intro_img_alt; ?>" class="intro-image"/>

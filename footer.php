@@ -1,5 +1,5 @@
     </div>
-      <div class="footer">
+      <div class="footer fadeIn">
 
         <div class="social-box">
           <a href="http://instagram.com/thisismodest" alt="Follow Modest Industries on Instagram" target="_blank"><img class="social-icon" src="img/instagram.png"></a>

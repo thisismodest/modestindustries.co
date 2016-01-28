@@ -17,16 +17,16 @@ $custom_scripts = "";
 include 'header.php'; ?>
 
   <div class="section text">
-    <h2 class="col1">Being Modest</h2>
+    <h2 class="col1">It's nice to meet you</h2>
     <p class="col2">Modest Industries is a small creative workshop specialising in ideas, design and development. If you have the project, we have the people. If we don't, well, we'll find them.</p>
     <p class="col2">Our team is skilled in everything from Image Manipulation, Databasing and HTML5 development to Strategic Thinking, Social Awareness and even Sewing. </p>
   </div>
-
+<!-- 
   <div class="section text">
     <h2 class="col1">Our Ethos</h2>
     <p class="col2">We believe in modesty. We like confidence without the ego, to be honest and understanding treating everyone with respect. Our goal at Modest is simple. Be happy.</p>
     <p class="col2">Modest Industries caters to businesses big and small working with family run shops to tech giants. Take a look around and if you like what you see, get in touch.</p>
-  </div>
+  </div> -->
 
     
 
