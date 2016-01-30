@@ -18,8 +18,8 @@ include 'header.php'; ?>
   
   <div class="section text">
     <h2 class="col1">We're hiring!</h2>
-    <p class="col2">Let's be frank here. We're young. We're growing quickly and we need people to make stuff and absorb themselves into the Modest way of working. This means no buzzwords or any marketing fluff.</p>
-    <p class="col2">If you're still interested then show us your work, tell us about your hobbies and answer this very important life changing question: if you could make anything, what would it be? Take a look at what's on offer below.</p>
+    <p class="col2">Let's be frank here. We're young. We're growing quickly and we need people to make stuff and absorb themselves into the Modest way of working.</p>
+    <p class="col2">If you're interested we'd love to see your work. Get in touch and tell us about yourself.</p>
   </div>
 
   <div class="section product">

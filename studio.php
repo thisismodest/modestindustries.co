@@ -6,9 +6,11 @@ $meta_description = "Modest Industries is an awesome digital entity that does st
 $meta_keywords = "modest industries, modest, digital agency, social design, design, web development, html5 banners, development, banners, social campaigns, GreenSock, idea generation, concepts";
 
 $intro_title = "Studio";
-$intro_description = "Where we learn from our mistakes.";
+$intro_description = "Here we make our mess.";
+//$intro_description = "Where we learn from our mistakes.";
 
-$intro_img_url = "header-eraser.png";
+
+$intro_img_url = "header-spill.png";
 $intro_img_alt = "Studio equipment";
 
 $custom_css = "";
@@ -19,7 +21,7 @@ include 'header.php'; ?>
   <div class="section text">
     
     <h2 class="col1">Studio / Workshop / Factory</h2>
-    <p class="col2">Our studio has a well stocked range of facilities so we can do the very best for you. From the multi-device development test bench to the photography studio.</p>
+    <p class="col2">Our studio has a well stocked range of facilities so we can do the very best for you. From the multi-device development test bench to our photography area.</p>
     <p class="col2">The benefit of having everything we need in one place means that we have instant access to familiar equipment so we can produce quality work quicker.</p>
   </div>
 

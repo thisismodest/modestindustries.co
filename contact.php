@@ -20,13 +20,6 @@ if ($action=="") { /* conditional to check if form has been submitted */
 
   include 'header.php'; ?>
 
-<!-- <div class="section text">
-  <h2 class="col1">Modest</h2>
-  <p class="col2">We're a friendly bunch so there's really no reason not to talk to us. Maybe you need a little more convincing? Okay, keep reading. Maybe we can convince you. I mean, if you don't get in touch, we'll never know what could have been. Think about it; that little idea that popped up from that little email...</p>
-  <p class="col2">That little chat, that little spark and POW we have a big idea! Let's grow this into something amazing. What's that? Our idea has grown up and is having babies?! Now we're talking about idea babies running around and when they grow up, dare I say it – world domination, and it all starts with a "Hey guys, what's up?".</p>
-</div> -->
-
-
 <div id="contact-us"class="section contact"> 
 
   <h2 class="col1">Use the beautiful form below to contact us</h2>
@@ -84,10 +77,11 @@ if ($action=="") { /* conditional to check if form has been submitted */
 
     /* NEEDS 'BACK TO CONTACT FORM' HREF LINK  ^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
-    $intro_img_url = "postbox.jpg"; /* NEEDS ERROR IMAGE */
+    $intro_img_url = "header-cups-failed.png";
     $intro_img_alt = "UH OH!";
 
     include 'header.php';
+    include 'footer.php';
 
   } else { /* show thank you */
     $from="From: $name<$email>\r\nReturn-path: $email";
@@ -100,8 +94,8 @@ if ($action=="") { /* conditional to check if form has been submitted */
     $intro_title = "Thank You!";
     $intro_description = "Your message has been sent. We'll get back to you as soon as we possibly can.";
 
-    $intro_img_url = "postbox.jpg"; /* NEEDS MESSAGE SENT IMAGE */
-    $intro_img_alt = "IT'S A POSTBOX!"; 
+    $intro_img_url = "header-cups-success.png";
+    $intro_img_alt = "Thank you for your message"; 
 
     include 'header.php';
     include 'footer.php';
