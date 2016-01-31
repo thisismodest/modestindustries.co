@@ -30,25 +30,25 @@ include 'header.php'; ?>
     <h2 class="col1">Photography Studio</h2>
     <div class="alt-box">
       <img src="img/gif/backdrop.gif">
-      <p>Images speak a thousand words, but all we really want is to make someone smile. Our set up is capable of snapping anything that can fit through a door. People, products, animals (preferably cute and fluffy) and everything else we haven't thought of yet. Here's a fun fact; every photo on this website was produced by us.</p>
+      <p>We love photography. Having the skills and equipment in our studio to take photos of products, people, animals and anything else we can fit through the door means we spend less time looking for stock photos and more time making something original for your project.</p>
     </div>
 
     <h2 class="col1">Multi-device Dev Test Bench</h2>
     <div class="alt-box">
-      <img src="img/placeholder-phone.jpg">
-      <p>Over the years technology has grown exponentially and because of this there is a vast catalogue of devices, screen-sizes, browsers, programming languages, operating systems... the list goes on. To make sure what we build works where you need it to, we have a mix of laptops, tablets and mobile devices running the most popular software to run our builds on.</p>
+      <img src="img/gif/devices.gif">
+      <p>There is a vast catalogue of devices, screen-sizes, browsers, programming languages, operating systems – the list goes on. We have a mix of laptops, tablets and mobile devices using the latest software so that we can run the tests needed to make sure what we build works for your customers.</p>
     </div>
-
+<!--
     <h2 class="col1">Crafting Shed</h2>
     <div class="alt-box">
       <img src="img/placeholder-phone.jpg">
       <p>When we need to build bespoke props, mock up packaging concepts or build a stand to help hold something up we can pop into the shed. Tearing ourselves away from technology to build something in real life is great for giving a project something unique and a nice personal touch.</p>
     </div>
-
+-->
     <h2 class="col1">Visit us</h2>
     <div class="alt-box">
-      <img src="img/placeholder-phone.jpg">
-      <p>A change of scenery can do wonders for the mind which is why we extend an open-invite to all of our clients to visit us and work from our studio. We offer a welcoming and productive environment and are always happy to candidly bounce ideas around.</p>
+      <img src="img/gif/coffee.gif">
+      <p>Meet our team, see our space and enjoy the environment. Pop by for a tour or drop in for a coffee, either way, we'd love to have you over.</p>
     </div>
 
   </div>

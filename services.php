@@ -62,7 +62,7 @@ include 'header.php'; ?>
     <h2 class="col1">Retainers</h2>
     <div class="alt-box">
       <img src="img/gif/calendar.gif">
-      <p>Last but not least, We're happy to introduce (in a very limited supply) a variety of bespoke retainers. We offer extra design, development or content producing resource. You pick how much of each resource you'll need and we'll supply a monthly retainer to keep your business going without the worry of overflow slowing you down.</p>
+      <p>We're happy to introduce (in a very limited supply) customisable retainers. We offer design, web development, and content production resource. You pick how much of each resource you'll need and we'll supply a monthly retainer to keep your business going without the worry of overflow slowing you down.</p>
     </div>
     <a class="cta-btn" href="contact">Let's Grow Together</a>
 
