@@ -23,7 +23,6 @@
 
     </div>
     <script src="js/CSSPlugin.min.js"></script>
-    <script src="js/EasePack.min.js"></script>
     <script src="js/TweenLite.min.js"></script>
     <script src="js/main.js"></script>
 

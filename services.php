@@ -2,11 +2,11 @@
 $page_id = "services";
 $site_title = "Services";
 
-$meta_description = "Modest Industries is an awesome digital entity that does stuff and it's really cool.";
-$meta_keywords = "modest industries, modest, digital agency, social design, design, web development, html5 banners, development, banners, social campaigns, GreenSock, idea generation, concepts";
+$meta_description = "Modest Industries provides individual solutions for our clients. Get in touch to find out exactly what we can do for you.";
+$meta_keywords = "modest industries, modest, digital agency, social media, design, web development, html5 banners, services, startup package, content creation, development, banners, idea generation, concepts";
 
 $intro_title = "Services";
-$intro_description = "Our offerings to help you grow";
+$intro_description = "Measure up what we can do for you.";
 
 $intro_img_url = "header-long-ruler.png";
 $intro_img_alt = "Services from Modest Industries";
@@ -17,9 +17,9 @@ $custom_scripts = "";
 include 'header.php'; ?>
 
   <div class="section text">
-    <h2 class="col1">A few things to get you going</h2>
-    <p class="col2">The services we provide are bespoke to the client as there's no one-size-fits-all solution. Find out how we can help you by getting in touch for a friendly no-obligation chat with us.</p>
-    <p class="col2">For every problem there are countless solutions. Below are some of the services we offer to give you an idea of the areas we work in and how we can help you grow.</p>
+    <h2 class="col1">Some things to get you going</h2>
+    <p class="col2">Below are a selection of our most popular services to help you deliver the right message to your customers.</p>
+    <p class="col2">We provide individual solutions for our clients. Get in touch to find out exactly what we can do for you.</p>
   </div>
 
   <div class="section service">

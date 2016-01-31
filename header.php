@@ -36,6 +36,8 @@
           <a href="products">PRODUCTS</a>
         </li><li>
           <a href="studio">STUDIO</a>
+        </li><li>
+          <a href="hire-me" style="color:#ef1616;">VACANCIES</a>
         </li>
       </ul>';
 

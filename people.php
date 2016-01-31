@@ -2,8 +2,8 @@
 $page_id = "people";
 $site_title = "People";
 
-$meta_description = "Modest Industries is an awesome digital entity that does stuff and it's really cool.";
-$meta_keywords = "modest industries, modest, digital agency, social design, design, web development, html5 banners, development, banners, social campaigns, GreenSock, idea generation, concepts";
+$meta_description = "The people here at Modest are the essence of what we do. Each are equipped with their own specialty and healthy curiosity to learn.";
+$meta_keywords = "modest industries, modest, meet the team, employees, staff, creative team, creative developers, creative technologists, modest people, social campaigns, idea generation, concepts";
 
 $intro_title = "Meet the Team";
 $intro_description = "Friendly faces with nice ideas.";
@@ -18,7 +18,7 @@ include 'header.php'; ?>
 
   <div class="section text">
     <h2 class="col1">The Power of People</h2>
-    <p class="col2">There are a number of factors that we take into consideration before working with someone. Talented, personable and having initiative are a few key traits we look for when growing.</p>
+    <p class="col2">There are a number of factors we take into consideration before working with someone. Talent, personality and initiative are a few key traits we like to look for.</p>
     <p class="col2">Introducing the people turning the cogs here at Modest. They're the essence of what we do, each equipped with their own specialty and healthy curiosity to learn.</p>
   </div>
 
@@ -41,7 +41,7 @@ include 'header.php'; ?>
     </div>
 
     <div class="product-box col2">
-      <img src="img/gif/steve.gif" class="product-image">
+      <img src="img/gif/solly.gif" class="product-image">
       <h2>Solly</h2>
       <p>Behind the magical charm, chiselled muscles and ravishing good looks (like really, really, ridiculously good looking) he's just like the rest of us. Except I forgot to mention that he's also really smart and knows his way around a computer. From build to code – this guy's front-end skill is incredible... but he won't tell you that. That's why we like him.</p>
       <a href="https://twitter.com/thesoltrain" alt="Follow Sol on Twitter" class="multi-button btn2">Twitter</a>
@@ -49,9 +49,9 @@ include 'header.php'; ?>
     </div>
 
     <div class="product-box col2">
-      <img src="img/gif/marcus.gif" class="product-image">
+      <img src="img/gif/charlotte.gif" class="product-image">
       <h2>Charlotte</h2>
-      <p>Some say she's only here because she's sleeping with the boss (he <em>is</em> dreamy), but once you see what she can do you'll soon realise that behind her perfectly styled hair and beautiful smile lay the mind and eye of a meticulously hands-on designer. Charlotte's work ranges from typography and layouts to illustration and hand-sewn letter cushions.</p>
+      <p>Charlotte's background using real materials to make beautiful objects and the ability to translate it on screen gives her the extra depth and versatility that we love to see here at Modest. Behind her beaming smile is a meticulous hands-on designer with work ranging from typography and layouts to illustration and hand-sewn letter cushions.</p>
       <a href="http://twitter.com/beingcharlottex" alt="Follow Charlotte on Twitter" class="multi-button btn2">Twitter</a>
       <a href="http://www.beingcharlotte.com/" alt="Read Charlotte's Blog" class="multi-button btn2">Blog</a>
     </div>

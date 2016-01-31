@@ -2,8 +2,8 @@
 $page_id = "contact";
 $site_title = "Contact";
 
-$meta_description = "Looking to chat with Modest? This is the page you're looking for.";
-$meta_keywords = "modest industries, modest, digital agency, social design, design, web development, html5 banners, development, banners, social campaigns, GreenSock, idea generation, contact form";
+$meta_description = "Looking to chat with Modest Industries? This is the page you're looking for.";
+$meta_keywords = "modest industries, modest, contact modest industries, contact form, digital agency, design, web development, development, banners, social campaigns, idea generation, get in touch";
 
 $custom_css = "";
 $custom_scripts = "";
