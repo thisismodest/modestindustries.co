@@ -6,7 +6,7 @@ $meta_description = "The people here at Modest are the essence of what we do. Ea
 $meta_keywords = "modest industries, modest, meet the team, employees, staff, creative team, creative developers, creative technologists, modest people, social campaigns, idea generation, concepts";
 
 $intro_title = "Meet the Team";
-$intro_description = "Friendly faces with nice ideas.";
+$intro_description = "Friendly faces with bright ideas.";
 
 $intro_img_url = "header-bulb.png";
 $intro_img_alt = "People by Modest Industries";

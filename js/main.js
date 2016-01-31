@@ -8,8 +8,6 @@ var fadeIn = document.getElementsByClassName('fadeIn')[0];
 
 var open_menu_height = (header_menu_list.getElementsByTagName('li').length * 26) + 30; //top:10px + bottom:20px + li:26px
 
-
-
 function toggleMenu(){ 
   if (!menuOpen && !animating) {
     animating = true;
