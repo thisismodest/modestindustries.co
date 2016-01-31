@@ -27,7 +27,7 @@ include 'header.php'; ?>
       <img src="img/gif/cutting-board.gif" class="product-image">
       <h2>Designer</h2>
       <p>Know your kerning from your leading? Are you in love with layouts? Do you like ubiquitous user experience? I hope you're enjoying these alliterations because there's more where that came from.</p>
-      <a href="#" class="main-button">Apply for this</a>
+      <a href="contact" class="main-button">Apply for this</a>
     </div>
 
     <div class="product-box col2">
