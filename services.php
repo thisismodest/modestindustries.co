@@ -41,7 +41,7 @@ include 'header.php'; ?>
     <h2 class="col1">Social Management</h2>
     <div class="alt-box">
       <img src="img/megaphone.png">
-      <p>Every company needs a voice and using social media is a great way to talk with your customers. We can help you plan your strategy and produce imagery and well written copy to accompany your content calender. We'll figure out the best channels you need to be on and what you need to be saying on each one.</p>
+      <p>Every company needs a voice and using social media is a great way to talk with your customers. We help plan your strategy and produce the visuals with well written copy to accompany your content calender. We'll figure out the best channels you need to be on and what you need to be saying on each one.</p>
     </div>
     <a class="cta-btn" href="contact">Let's Socialise</a>
 
