@@ -24,33 +24,19 @@ include 'header.php'; ?>
 
   <div class="section product">
     <div class="product-box col2">
-      <img src="img/gif/cutting-board.gif" class="product-image">
+      <img src="img/png/cutting-board.png" class="product-image">
       <h2>Designer</h2>
       <p>Know your kerning from your leading? Are you in love with layouts? Do you like ubiquitous user experience? I hope you're enjoying these alliterations because there's more where that came from.</p>
       <a href="contact" class="main-button">Apply for this</a>
     </div>
 
     <div class="product-box col2">
-      <img src="img/gif/devices-2.gif" class="product-image">
+      <img src="img/png/devices-2.png" class="product-image">
       <h2>Front-End Developer</h2>
       <p>Oh no! It looks like the button below doesn't work. If only there was some way it could be fixed so you could apply for this position... Your role will involve you being proficient in HTML5, CSS3 and JavaScript.</p>
       <a href="mailto:hello+secretdeveloperaccess@modestindustries.co" class="main-button broken">Fix me</a>
     </div>
-<!--
-    <div class="product-box col2">
-      <img src="img/placeholder-phone.jpg" class="product-image">
-      <h2>Client Relations Manager</h2>
-      <p>Bacon ipsum dolor amet pork belly spare ribs sirloin pancetta short ribs. Capicola boudin pork chop meatball filet mignon landjaeger meatloaf turkey beef ribs ball tip kielbasa cow ground round doner. Shankle tenderloin pork belly meatloaf saeatball filet mignon landjaeger meatloaf turkey beef ribs ball tip kielbasa cow ground round doner.</p>
-      <a href="#" class="main-button">View Product</a>
-    </div>
 
-    <div class="product-box col2">
-      <img src="img/placeholder-phone.jpg" class="product-image">
-      <h2>New Business Hunter</h2>
-      <p>Bacon ipsum dolor amet pork belly spare ribs sirloin pancetta short ribs. Capicola boudin pork chop meatball filet mignon landjaeger meatloaf turkey beef ribs ball tip kielbasa cow ground round doner. Shankle tenderloin pork belly meatloaf saeatball filet mignon landjaeger meatloaf turkey beef ribs ball tip kielbasa cow ground round doner.</p>
-      <a href="#" class="main-button">View Product</a>
-    </div>
--->
   </div>
 
 <?php include 'footer.php'; ?>

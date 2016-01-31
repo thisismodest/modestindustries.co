@@ -24,32 +24,19 @@ include 'header.php'; ?>
 
   <div class="section product">
     <div class="product-box col2">
-      <img src="img/gif/sweat-roulette.gif" class="product-image">
+      <img src="img/png/sweat-roulette.png" class="product-image">
       <h2>Sweat Roulette</h2>
       <p>Sweat Roulette is a cross-platform web-app we built to help you keep fit. There's one rule; do the exercise it says on the screen. Each one will last for 20-40 seconds before changing. Do the exercise as hard as you can for as long as you can. One exercise is equal to one point so once you're done you can tweet your score for bragging (or slagging) rights.</p>
       <a href="http://sweatroulette.com" class="main-button">Play Sweat Roulette</a>
     </div>
  
     <div class="product-box col2" style="opacity:0.4">
-      <img src="img/gif/computer-and-phone.gif" class="product-image">
+      <img src="img/png/computer-and-phone.png" class="product-image">
       <h2>More Coming Soon</h2>
       <p>At the moment we have a few products in development, but they're not quite ready yet, so keep an eye on our products page or follow us on twitter for the latest releases <a href="http://twitter.com/thisismodest" target="_blank" title="Follow Modest Industries on Twitter... go on, you know you want to.">@thisismodest</a>. On the flip side, if you have an idea for a product that'll improve people lives and you want to let people use it for free, get in touch via our <a href="contact">contact form</a> and let's talk.</p>
       <span class="main-button">Coming Soon!</span>
     </div>
-<!--
-    <div class="product-box col2">
-      <img src="img/gif/sweat-roulette.gif" class="product-image">
-      <h2>Sweat Roulette #3</h2>
-      <p>Bacon ipsum dolor amet pork belly spare ribs sirloin pancetta short ribs. Capicola boudin pork chop meatball filet mignon landjaeger meatloaf turkey beef ribs ball tip kielbasa cow ground round doner. Shankle tenderloin pork belly meatloaf saeatball filet mignon landjaeger meatloaf turkey beef ribs ball tip kielbasa cow ground round doner.</p>
-      <a href="#" class="main-button">View Product</a>
-    </div>
 
-    <div class="product-box col2">
-      <img src="img/gif/sweat-roulette.gif" class="product-image">
-      <h2>Sweat Roulette #4</h2>
-      <p>Bacon ipsum dolor amet pork belly spare ribs sirloin pancetta short ribs. Capicola boudin pork chop meatball filet mignon landjaeger meatloaf turkey beef ribs ball tip kielbasa cow ground round doner. Shankle tenderloin pork belly meatloaf saeatball filet mignon landjaeger meatloaf turkey beef ribs ball tip kielbasa cow ground round doner.</p>
-      <a href="#" class="main-button">View Product</a>
-    </div> -->
   </div>
 
 <?php include 'footer.php'; ?>

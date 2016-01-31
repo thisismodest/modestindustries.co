@@ -24,7 +24,7 @@ include 'header.php'; ?>
 
   <div class="section product">
     <div class="product-box col2">
-      <img src="img/gif/marcus.gif" class="product-image">
+      <img src="img/png/marcus.png" class="product-image">
       <h2>Marcus</h2>
       <p>Too many people, too many processes and too many unnecessary meetings. It's a common story of creative talent and passion being diluted by big advertising agencies. The traditional model fails people for profit. Marcus founded Modest Industries to get back to basics and grow a digital agency focused around people.</p>
       <a href="http://twitter.com/marcusmichaels" alt="Follow Marcus on Twitter" class="multi-button btn2">Twitter</a>
@@ -33,7 +33,7 @@ include 'header.php'; ?>
     </div>
 
     <div class="product-box col2">
-      <img src="img/gif/steve.gif" class="product-image">
+      <img src="img/png/steve.png" class="product-image">
       <h2>Steve</h2>
       <p>Steve is the guy who knows what needs to be known about back-end technologies and databases. Does that sound boring? Most likely, however, having a solid back-end and a well designed database means quality data and fast speeds. If all the websites that used databases didn't exist... well, that <em>would</em> be boring.</p>
       <a href="https://twitter.com/BscSteveWolfe" alt="Follow Steve on Twitter" class="multi-button btn2">Twitter</a>
@@ -41,7 +41,7 @@ include 'header.php'; ?>
     </div>
 
     <div class="product-box col2">
-      <img src="img/gif/solly.gif" class="product-image">
+      <img src="img/png/solly.png" class="product-image">
       <h2>Solly</h2>
       <p>Behind the magical charm, chiselled muscles and ravishing good looks (like really, really, ridiculously good looking) he's just like the rest of us. Except I forgot to mention that he's also really smart and knows his way around a computer. From build to code – this guy's front-end skill is incredible... but he won't tell you that. That's why we like him.</p>
       <a href="https://twitter.com/thesoltrain" alt="Follow Sol on Twitter" class="multi-button btn2">Twitter</a>
@@ -49,7 +49,7 @@ include 'header.php'; ?>
     </div>
 
     <div class="product-box col2">
-      <img src="img/gif/charlotte.gif" class="product-image">
+      <img src="img/png/charlotte.png" class="product-image">
       <h2>Charlotte</h2>
       <p>Charlotte's background using real materials to make beautiful objects and the ability to translate it on screen gives her the extra depth and versatility that we love to see here at Modest. Behind her beaming smile is a meticulous hands-on designer with work ranging from typography and layouts to illustration and hand-sewn letter cushions.</p>
       <a href="http://twitter.com/beingcharlottex" alt="Follow Charlotte on Twitter" class="multi-button btn2">Twitter</a>

@@ -27,13 +27,13 @@ include 'header.php'; ?>
 
     <h2 class="col1">Photography Studio</h2>
     <div class="alt-box">
-      <img src="img/gif/backdrop.gif">
+      <img src="img/png/backdrop.png">
       <p>We love photography. Having the skills and equipment in our studio to take photos of products, people, animals and anything else we can fit through the door means we spend less time looking for stock photos and more time working on something original for your project.</p>
     </div>
 
     <h2 class="col1">Cross-Platform Development Testing</h2>
     <div class="alt-box">
-      <img src="img/gif/devices.gif">
+      <img src="img/png/devices.png">
       <p>There is a vast catalogue of devices, screen-sizes, browsers, operating systems – the list goes on. We have a mix of laptops, tablets and mobile devices using the latest software so that we can run the tests needed to make sure what we build works where you need it to.</p>
     </div>
 <!--
@@ -45,7 +45,7 @@ include 'header.php'; ?>
 -->
     <h2 class="col1">Visit us</h2>
     <div class="alt-box">
-      <img src="img/gif/coffee.gif">
+      <img src="img/png/coffee.png">
       <p>Our door is always open for you to come in, meet our team and see the studio. Pop by for a cheeky tour or drop in for a quick coffee, either way, we'd love to have you.</p>
     </div>
 
