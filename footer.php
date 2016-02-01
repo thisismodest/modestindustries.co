@@ -8,9 +8,8 @@
           </div>
 
           <div class="to-top">
-            <a href="#header" title="Back to top">
-              <img src="img/core/up-arrow.png">
-            </a>
+          <a class="scroll" data-speed="400" data-easing="easeOutQuad" data-url="false" href="#header"><img src="img/core/up-arrow.png"></a>
+              
           </div>
 
           <div class="footer-logo">
