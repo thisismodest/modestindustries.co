@@ -34,7 +34,8 @@ include 'header.php'; ?>
       <img src="img/png/devices-2.png" class="product-image">
       <h2>Front-End Developer</h2>
       <p>Oh no! It looks like the button below doesn't work. If only there was some way it could be fixed so you could apply for this position... Your role will involve you being proficient in HTML5, CSS3 and JavaScript.</p>
-      <a href="mailto:hello+secretdeveloperaccess@modestindustries.co" class="main-button broken">Fix me</a>
+      <a href="#fixerupper" id="fixerupper" class="main-button broken">Fix me</a>
+      <!-- HINT: If only you could fix the button by removing what's broken... -->
     </div>
 
   </div>
