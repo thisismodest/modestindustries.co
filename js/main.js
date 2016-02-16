@@ -29,8 +29,10 @@ function toggleMenu(){
   }
 }
 
-//Developer Email 'FIX ME' Test
-document.getElementById("fixerupper").addEventListener("click", showEmail);
+if (document.getElementById("fixerupper")!= null || document.getElementById("fixerupper")!= undefined) {
+  //Developer Email 'FIX ME' Test
+  document.getElementById("fixerupper").addEventListener("click", showEmail);
+}
 
 function emailemailemail(){
   return "hello+secretdeveloperaccess@modestindustries.co";
@@ -41,7 +43,7 @@ var secret = [{
   "email":function(){return emailemailemail();}}];
 
 function showEmail(){
-  console.log("Know anyone called Jason? They might know the 'secret'...");
+  alert("Well done! You've passed stage one... Now it's time to look for the 'secret', but beware because the console knows to conceal it...")
 }
 
 /* =============================================================
