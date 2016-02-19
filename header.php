@@ -35,7 +35,7 @@
     <?php $page_menu='
       <ul id="header-menu-list">
         <li>
-          <a href="index">HOME</a>
+          <a href="/">HOME</a>
         </li><li>
           <a href="contact">CONTACT</a>
         </li><li>
