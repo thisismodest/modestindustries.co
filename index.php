@@ -23,7 +23,7 @@ include 'header.php'; ?>
   </div>
 
   <div class="section logos">
-    <h2 class="col1">Our Partners &amp; Clients</h2>
+    <h2 class="col1">Partners &amp; Clients</h2>
     <ul class="logo-items">
 
       <li>
@@ -56,9 +56,10 @@ include 'header.php'; ?>
           <img src="img/logos/obviously_creative_logo.png">
         </a>
       </li>
-    
 
     </ul>
+
+    <a class="cta-btn" href="contact">Tell us about yourself ></a>
 
   </div>
 
