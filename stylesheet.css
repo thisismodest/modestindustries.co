@@ -439,7 +439,7 @@ h2::after,
   border-bottom:1px solid #EEE;
 }
 
-.text, .contact, .studio {
+.text, .contact, .studio, .logos {
   border-bottom:1px solid #FAFAFA;
 }
 
@@ -493,6 +493,16 @@ h2::after,
   padding-top: 0;
 }
 
+.logos {
+
+}
+
+ul.logo-items li {
+  float: left;
+  text-align: center;
+  /*width:33.33333333%;*/  /* 5 columns */ 
+  width:25%;  /* 4 columns */ 
+}
 
 /* Contact Form */
 

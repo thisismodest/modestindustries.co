@@ -22,4 +22,44 @@ include 'header.php'; ?>
     <p class="col2">Our team works by having a healthy mix of talent from Image Manipulation, Databasing and HTML5 development to Strategic Thinking, Social Awareness and even Sewing. </p>
   </div>
 
+  <div class="section logos">
+    <h2 class="col1">Our Partners &amp; Clients</h2>
+    <ul class="logo-items">
+
+      <li>
+        <a target="_blank" href="http://www.flashtalking.com/uk/" >
+          <img src="img/logos/flashtalking_logo.png">
+        </a>
+      </li>
+
+      <li>
+        <a target="_blank" href="http://www.brane.co.uk/">
+          <img src="img/logos/brane_logo.png">
+        </a>
+      </li>
+
+      <li>
+        <a target="_blank" href="https://www.meteor.com/">
+          <img src="img/logos/meteor_partner_logo.png">
+        </a>
+      </li>
+
+      <!-- <li>
+        <a target="_blank" href="http://infinite.co.uk/">
+          <img src="img/logos/infinite_logo.png">
+        </a>
+      </li> -->
+
+    
+      <li>
+        <a target="_blank" href="http://obviouslycreative.co.uk/">
+          <img src="img/logos/obviously_creative_logo.png">
+        </a>
+      </li>
+    
+
+    </ul>
+
+  </div>
+
 <?php include 'footer.php'; ?>
