@@ -1,6 +1,6 @@
 <?php
 $page_id = "index";
-$site_title = "Modest Industries";
+$site_title = "Modest Industries: Your New Digital Creative Agency";
 
 $meta_description = "Modest Industries is a small creative agency specialising in ideas, design and development.";
 $meta_keywords = "modest industries, modest, digital agency, creative agency, advertising, marketing, design, web development, html5 banners, development, banners, social media, idea generation, strategy";

@@ -891,8 +891,3 @@ button:focus {
   50%   { transform: rotate(360deg) translateX(5px) rotate(-360deg); }
   100%  { transform: rotate(720deg) translateX(-5px) rotate(-720deg); }
 }
-
-
-
-
-
