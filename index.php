@@ -23,7 +23,7 @@ include 'header.php'; ?>
   </div>
 
   <div class="section logos">
-    <h2 class="col1">Partners &amp; Clients</h2>
+    <h2 class="col1">Friends of Modest</h2>
     <ul class="logo-items">
 
       <li>
