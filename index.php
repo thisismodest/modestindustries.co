@@ -19,7 +19,7 @@ include 'header.php'; ?>
   <div class="section text">
     <h2 class="col1">It's nice to meet you</h2>
     <p class="col2">Modest Industries is a small creative agency specialising in ideas, design and development. For projects big and small, we tailor our team to meet your requirements.</p>
-    <p class="col2">Our team works by having a healthy mix of talent from Image Manipulation, Databasing and HTML5 development to Strategic Thinking and Social Awareness.</p>
+    <p class="col2">Our team works by having a healthy mix of talent from Image Manipulation, Databasing and HTML5 development to Strategic Thinking and Social Awareness. Some stuff</p>
   </div>
 
 <?php include 'footer.php'; ?>
