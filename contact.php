@@ -7,8 +7,11 @@ $meta_keywords = "modest industries, modest, contact modest industries, contact 
 
 $custom_css = "";
 $custom_scripts = "";
+$action = "";
 
-$action=$_REQUEST['action']; 
+if (isset($_REQUEST['action'])) {
+  $action=$_REQUEST['action']; 
+}
 
 if ($action=="") { /* conditional to check if form has been submitted */
 
@@ -45,7 +48,7 @@ if ($action=="") { /* conditional to check if form has been submitted */
 
     <div>
       <label for='url'>Website</label>
-      <input type='text' name='website' placeholder='http://' />
+      <input type='text' name='url' placeholder='http://' />
     </div>
 
     <div>
@@ -86,7 +89,7 @@ if ($action=="") { /* conditional to check if form has been submitted */
   } else { /* show thank you */
     $from="From: $name<$email>\r\nReturn-path: $email";
     $subject="Modest Contact Form";
-    $message="$message\n\n$name\n<$email>\n$tel\n\nSent via the Modest Contact Form";
+    $message="$message\n\n$name\n<$email>\n$tel\n$url\n\nSent via the Modest Contact Form";
     mail("hello@modestindustries.co", $subject, $message, $from);
 
     $site_title = "Thank You!";
