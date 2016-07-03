@@ -294,7 +294,6 @@ img.intro-image{
 }
 
 .footer-logo {
-  position: relative;
   width: 100px;
   height: auto;
   margin: 0 auto;
@@ -448,8 +447,9 @@ h2::after,
   border-bottom:2px solid #111111;
 }
 
+
 .main-button, .multi-button, .cta-btn {
-  border: 1px solid #DDD;
+  border: 1px solid #eee;
   box-sizing:border-box;
 }
 
@@ -493,20 +493,6 @@ h2::after,
   padding-top: 0;
 }
 
-ul.logo-items {
-  overflow: hidden;
-  padding-bottom: 20px;
-
-}
-
-ul.logo-items li {
-  float: left;
-  text-align: center;
-  /*width:20%;*/            /* 5 columns */ 
-  width:25%;                /* 4 columns */ 
-  /*width:33.33333333%;*/   /* 3 columns */ 
-  /*width: 50%;*/           /* 2 columns */
-}
 
 /* Contact Form */
 
@@ -853,41 +839,35 @@ button:focus {
   transition: 0.6s;
 }
 
-/* FOOTER LOGO BANNER FLOATING ANIMATION */
-
-.footer-logo {
-  height: 50px;
+.animation{
+  -webkit-animation: fadein 2s;
+  -moz-animation: fadein 2s; 
+  -ms-animation: fadein 2s; 
+  -o-animation: fadein 2s; 
+  animation: fadein 2s;
 }
 
-.footer-logo img {
-  position: absolute;
-  -webkit-animation: floatingBanner 6s linear 0s infinite;
-  -moz-animation: floatingBanner 6s linear 0s infinite; 
-  -ms-animation: floatingBanner 6s linear 0s infinite; 
-  -o-animation: floatingBanner 6s linear 0s infinite; 
-  animation: floatingBanner 6s linear 0s infinite;
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-@-webkit-keyframes floatingBanner {
-  0%    { -webkit-transform: rotate(0deg) translateX(-5px) rotate(0deg); }
-  50%   { -webkit-transform: rotate(360deg) translateX(5px) rotate(-360deg); }
-  100%  { -webkit-transform: rotate(720deg) translateX(-5px) rotate(-720deg); }
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-@-moz-keyframes floatingBanner {
-  0%    { -moz-transform: rotate(0deg) translateX(-5px) rotate(0deg); }
-  50%   { -moz-transform: rotate(360deg) translateX(5px) rotate(-360deg); }
-  100%  { -moz-transform: rotate(720deg) translateX(-5px) rotate(0deg); }
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-@-o-keyframes floatingBanner {
-  0%    { -o-transform: rotate(0deg) translateX(-5px) rotate(0deg); }
-  50%   { -o-transform: rotate(360deg) translateX(5px) rotate(-360deg); }
-  100%  { -o-transform: rotate(720deg) translateX(-5px) rotate(-720deg); }
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-@keyframes floatingBanner {
-  0%    { transform: rotate(0deg) translateX(-5px) rotate(0deg); }
-  50%   { transform: rotate(360deg) translateX(5px) rotate(-360deg); }
-  100%  { transform: rotate(720deg) translateX(-5px) rotate(-720deg); }
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
