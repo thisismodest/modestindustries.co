@@ -4,7 +4,7 @@
           <div class="social-box">
             <a href="http://instagram.com/thisismodest" alt="Follow Modest Industries on Instagram" target="_blank"><img class="social-icon" src="img/instagram.png"></a>
              <a href="http://twitter.com/thisismodest" alt="Follow Modest Industries on Twitter" target="_blank"><img class="social-icon" src="img/twitter.png"></a>
-            <a href="http://facebook.com/modestindustries" alt="Like Modest Industries on Facebook" target="_blank"><img class="social-icon" src="img/facebook.png"></a>
+            <a href="http://facebook.com/thisismodest" alt="Like Modest Industries on Facebook" target="_blank"><img class="social-icon" src="img/facebook.png"></a>
           </div>
 
           <div class="to-top">
