@@ -13,7 +13,9 @@
           </div>
 
           <div class="footer-logo">
-            <img src="img/core/modest-industries-banner-logo.png">
+            <a href="/">
+              <img src="img/core/modest-industries-banner-logo.png">
+            </a>
           </div>
 
           <p class="footer-copyright">&copy; 2014-<?php echo date('Y');?> MODEST INDUSTRIES LTD • Company No. 09229917 • Registered in England &amp; Wales at Unit 11, Hove Business Centre, Hove, East Sussex, BN3 6HA</p>
