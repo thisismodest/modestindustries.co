@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timex Weekender</title>
+  <!-- CSS -->
+  <style type="text/css">
+    html, body{
+      margin:0;
+      padding:0;
+
+      font-family: sans-serif;
+      font-size: 0.8em;
+      letter-spacing: 0.5px;
+
+      -webkit-user-select: none;  /* Chrome all / Safari all */
+      -moz-user-select: none;     /* Firefox all */
+      -ms-user-select: none;      /* IE 10+ */
+      user-select: none;          /* Likely future */
+    }
+
+    .website-bg {
+      position: relative;
+      width:1107px;
+      height: 1718px;
+      margin:auto;
+      background-image:url('img/watch-blog-bg.jpg');
+      background-size:1297px;
+      background-position: top center;
+      background-repeat: no-repeat;
+      z-index: 1001;
+    }
+
+    .website-bg > iframe {
+      position: absolute;
+      top: 687px;
+      right:0;
+      width:300px;
+      height:250px;
+      border:0;
+      outline:0;
+      margin:0;
+      padding:0;
+    }
+
+    .whiteout {
+      display: block;
+      position: absolute;
+      top:0;
+      left:0;
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      opacity: 1;
+    }
+
+    .unit-box {
+      position: absolute;
+      width: 54px;
+      height: 250px;
+      background-color: #eee;
+      right:300px;
+      top:411px;
+    }
+
+    .unit-box .copy{
+      position: absolute;
+      top: 119px;
+      right: -75px;
+      width: 240px;
+      transform: rotate(-90deg);
+      color: #AAA;
+      text-align: right;
+    }
+
+    .unit-box .copy a {
+      position: relative;
+      color:#888;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .unit-box .copy a:hover {
+      color: #000;
+    }
+
+    .container {
+      position: absolute;
+      top: 411px;
+      right:0;
+      width:298px;
+      height: 248px;
+      overflow: hidden;
+      border:1px solid black;
+      background-color: white;
+     /* transform: translate(-50%, -50%);
+      left:50%;
+      top:50%;*/
+
+      /*background-image: url('img/bg-day.jpg');*/
+      /*background-size: cover;*/
+    }
+
+    .clock {
+      position: relative;
+      border-radius: 50%;
+      height: 160px;
+      width: 160px;
+      transform: translate(-50%, -50%);
+      left:106px;
+      top:50%;
+    }
+
+    .clock:after {
+      position: absolute;
+      display: block;
+      border-radius: 50%;
+      content: "";
+      width: 14px;
+      height: 14px;
+      background-color: black;
+      left:50%;
+      top:50%;
+
+      margin-left:-7px;
+      margin-top:-7px;
+    }
+
+    .clock-bg {
+      position: relative;
+      transform: translate(-50%, -50%);
+      left:50%;
+      top:50%;
+    }
+
+    .timex {
+      display: block;
+      position: relative;
+      max-width: 100%;
+      /*transform: translate(-45px, -51px);*/
+    }
+
+    .indiglo {
+      display: none;
+      position: relative;
+      max-width: 100%; 
+    }
+
+    #casing {
+      position: absolute;
+      background-image: url('img/timex-casing.png');
+      background-size: 201.5px;
+      background-position: 10px 12px;
+      background-repeat: no-repeat;
+      height:100%;
+      width:100%;
+    }
+
+    #second, #minute, #hour{
+      position: absolute;
+      width:4px;
+      bottom:50%;
+      left: 50%;
+      margin-left:-1.75px;
+      transform-origin: bottom;
+      transform: rotate(0deg);
+    }
+
+    #second {
+      text-align: center;
+      height: 64px;
+      width: 10px;
+      margin-left:-5px;
+      z-index: 1001;
+    }
+
+    #minute {
+      height: 73px;
+    }
+    #hour {
+      height: 50px;
+    }
+
+    #minute img,
+    #hour img {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height:100%;
+    }
+
+    #minute img {
+      bottom:-3px;
+    }
+
+    #second img {
+      text-align: center;
+      display: inline;
+      position: relative;
+      display: block;
+      bottom: 8.5px;
+      width:10px;
+    }
+
+    #darkness{
+      display:none;
+      width: calc(100% + 1px);
+      height: calc(100% + 1px);
+      position: absolute;
+      left:0;
+      top:0;
+      background-color: black;
+      opacity: 0.83;
+    }
+
+    #dark-bg {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left:0;
+      top:0;
+      content: "";
+      background-image: url('img/bg-night.jpg');
+      background-size: cover;
+    }
+
+    .controls {
+      position: absolute;
+      top:0;
+      right:0;
+      height:100%;
+      width:80px;
+    }
+
+    .button {
+      width:70px;
+      height:22px;
+      /*border-radius:50%;*/
+      /*border:3px solid white;*/
+      cursor: pointer;
+      right:2px;
+    }
+
+    .button:hover {
+      opacity: 0.8;
+    }
+
+    .glow {
+      position: absolute;
+      top:50%;  
+      margin-top:-11px;
+      background-color: #2ee2bf;
+    }
+
+    .glow::before {
+      display: block;
+      line-height: 21px;
+      width: 100%;
+      content:"INDIGLO";
+      text-align: center;
+    }
+
+    .glow::after {
+      /*position: absolute;
+      content: "";
+      width: 30px;
+      height: 2px;
+      background-color: black;
+      border-bottom:1px solid black;
+      left:-30px;
+      top:50%;
+      margin-top:-2px;*/
+    }
+
+    #strap {
+      position: absolute;
+      top: 0;
+      left:-4px;
+      width: 100%;
+      height:100%;
+      /*background-image: url('img/timex-khaki-strap.png');
+      background-image: url('img/timex-red-strap.png');
+      background-image: url('img/timex-blue-strap.png');
+      background-size: 308px;
+      background-repeat: no-repeat;
+      background-position: -40px;*/
+    }
+
+    .strap-blue-btn,
+    .strap-khaki-btn,
+    .strap-red-btn {
+      position: absolute;
+      /*left:25px;*/
+    }
+
+    .strap-blue-btn {
+      /*top:176px;*/
+      top:200px;
+      background-color: #163955;
+    }
+
+    .strap-khaki-btn {
+      top:224px;
+      background-color: #856E4d;
+    }
+
+    .strap-red-btn {
+      /*top:224px;*/
+      top:176px;
+      background-color: #630A16;
+    }
+
+    .selected::after {
+      position: absolute;
+      content: "";
+      background-color: inherit;
+      left: -7px;
+      height: 100%;
+      width: 4px;
+    }
+
+    .strap-color {
+      display: none;
+      position: absolute;
+      top:-31px;
+      left: -40px;
+      width: 309px;
+    }
+
+    .strap-color.blue {
+      display: block;
+    }
+
+    .logo {
+      position: absolute;
+      top:0;
+      right:0;
+      width: 100px;
+      height: 50px;
+      background-image: url('img/timex-logo.jpg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    a.clicktag {
+      display: block;
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height:100%;
+    }
+
+  </style>
+</head>
+
+<body onload="fadeIn()">
+
+  <div class="website-bg">
+    <div class="unit-box">
+      <div class="copy">
+        A <a href="http://modestindustries.co" target="_blank">MODEST</a> CONCEPT
+      </div>
+    </div>
+    <div class="container">
+      <div id="strap">
+        <img class="strap-color blue" src="img/timex-blue-strap.png">
+        <img class="strap-color khaki" src="img/timex-khaki-strap.png">
+        <img class="strap-color red" src="img/timex-red-strap.png">
+      </div>
+      <div id="casing"></div>
+      <div id="darkness"></div>
+      <div class="clock">
+        <img class="timex" src="img/timex-face.png">
+        <img class="indiglo" src="img/timex-face-indiglo.png">
+        <div id="minute">
+          <img class="timex" src="img/timex-minute-hand.svg" onerror="this.src='img/timex-minute-hand.png'">
+        </div>
+        <div id="hour">
+          <img class="timex" src="img/timex-hour-hand.svg" onerror="this.src='img/timex-hour-hand.png'">
+        </div>
+        <div id="second">
+          <img class="timex" src="img/timex-second-hand.svg" onerror="this.src='img/timex-second-hand.png'">
+        </div>
+      </div>
+
+      <a href="http://timex.co.uk" target="_blank" class="clicktag"></a>
+
+      <div class="controls">
+        <div class="button glow" onclick="lightsOff()"></div>
+        
+        <div class="button strap-blue-btn selected" onclick="strapColour('blue')"></div>
+        <div class="button strap-khaki-btn" onclick="strapColour('khaki')"></div>  
+        <div class="button strap-red-btn" onclick="strapColour('red')"></div>
+        
+            
+
+      </div>
+
+      <div class="whiteout"></div>
+      <div class="logo">
+        <a href="http://timex.co.uk" target="_blank" class="clicktag"></a>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    var secondHand    = document.getElementById('second'),
+        minuteHand    = document.getElementById('minute'),
+        hourHand      = document.getElementById('hour'),
+        date          = new Date(),
+        seconds       = date.getSeconds(),
+        minutes       = date.getMinutes(),
+        hours         = date.getHours(),
+        second        = seconds * 6,
+        minute        = minutes * 6,
+        hour          = civTime(hours),
+        lights        = true,
+        white         = true;
+
+    function civTime(h){
+      if (minutes > 30) {
+        var offset = 15;
+      } else {
+        var offset = 0;
+      }
+      if (h < 12) {
+        return (h * 30) + offset;
+      } else {
+        return (h % 12) * 30 + offset;
+      }
+    }
+
+    function setTime() {
+      second  = date.getSeconds() * 6;
+      setHand(secondHand, second);
+
+      if (second != 354 ) {
+        minute  = date.getMinutes() * 6;
+        setHand(minuteHand, minute);
+
+        minutes = minute / 6;
+        hour  = date.getHours();
+        hour  = civTime(hour);
+        setHand(hourHand, hour);
+      }
+    }
+
+    setTime();
+
+    setInterval(function(){
+     setTime();
+    },1000);
+
+    function setHand(id,time) {
+      date = new Date();
+      id.style.transform = "rotate(" + time + "deg)";
+    }
+ 
+
+    function lightsOff() {
+      var darkness = document.getElementById('darkness'),
+          timex    = document.getElementsByClassName('timex')[0],
+          indiglo  = document.getElementsByClassName('indiglo')[0],
+          strapBtn = document.getElementsByClassName('button');
+
+      if (lights) {
+        lights = false;
+        darkness.style.display = "block";
+        indiglo.style.display = "block";
+        timex.style.display = "none";
+        
+        strapBtn[1].style.display = "none";
+        strapBtn[2].style.display = "none";
+        strapBtn[3].style.display = "none";
+
+      } else {
+        lights = true;
+        darkness.style.display = "none";
+        indiglo.style.display = "none";
+        timex.style.display = "block";
+
+        strapBtn[1].style.display = "block";
+        strapBtn[2].style.display = "block";
+        strapBtn[3].style.display = "block";
+      }
+    }
+
+    function strapColour(color) {
+      var strap        = document.getElementById('strap'),
+          strapColours = document.getElementsByClassName('strap-color'),
+          strapBtn = document.getElementsByClassName('button');
+
+      switch(color) {
+        case "blue":
+          strapColours[0].style.display = "block";
+          strapColours[1].style.display = "none";
+          strapColours[2].style.display = "none";
+
+          strapBtn[1].className = "button strap-blue-btn selected";
+          strapBtn[2].className = "button strap-khaki-btn";
+          strapBtn[3].className = "button strap-red-btn";
+
+          break;
+
+        case "khaki":
+          strapColours[0].style.display = "none";
+          strapColours[1].style.display = "block";
+          strapColours[2].style.display = "none";
+
+          strapBtn[1].className = "button strap-blue-btn";
+          strapBtn[2].className = "button strap-khaki-btn selected";
+          strapBtn[3].className = "button strap-red-btn";
+
+          break;
+
+        case "red":
+          strapColours[0].style.display = "none";
+          strapColours[1].style.display = "none";
+          strapColours[2].style.display = "block";
+
+          strapBtn[1].className = "button strap-blue-btn";
+          strapBtn[2].className = "button strap-khaki-btn";
+          strapBtn[3].className = "button strap-red-btn selected";
+
+          break;
+
+        default:
+          strapColours[0].style.display = "block";
+          strapColours[1].style.display = "none";
+          strapColours[2].style.display = "none";
+
+          strapBtn[1].className = "button strap-blue-btn";
+          strapBtn[2].className = "button strap-khaki-btn";
+          strapBtn[3].className = "button strap-red-btn";
+      }
+    }
+
+    function fadeIn() {
+      var whiteout = document.getElementsByClassName('whiteout');
+      var i = 1.0;
+
+      var fadeTimer = setInterval(function(){
+        if (i>0.0) {
+          i-=0.1;
+          whiteout[0].style.opacity = i;
+        } else {
+          i=0;
+          whiteout[0].style.opacity = i;
+          whiteout[0].style.display = "none";
+          clearInterval(fadeTimer);
+        }
+      },1000/24);
+      
+     
+    }
+
+  </script>
+  
+</body>
+</html>
