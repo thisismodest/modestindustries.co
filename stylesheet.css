@@ -478,6 +478,14 @@ h2::after,
   margin-bottom:20px;
 }
 
+.product-box a {
+  display: block;
+}
+
+.product-box p a {
+  display: inline;
+}
+
 .product-image {
   display: block;
   margin-bottom:40px;
