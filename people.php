@@ -22,7 +22,7 @@ include 'header.php'; ?>
     <p class="col2">Introducing the people turning the cogs here at Modest. They're the essence of what we do, each equipped with their own specialty and healthy curiosity to learn.</p>
   </div>
 
-  <div class="section product">
+  <div class="section product people">
     <div class="product-box col2">
       <img src="img/png/marcus.png" class="product-image">
       <h2>Marcus</h2>

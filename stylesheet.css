@@ -440,7 +440,7 @@ h2::after,
 }
 
 .text, .contact, .studio {
-  border-bottom:1px solid #FAFAFA;
+  border-bottom:1px solid #EEE;
 }
 
 .text p a:hover {
@@ -474,13 +474,17 @@ h2::after,
   margin-bottom: 10px;
 }
 
+.product-box p {
+  margin-bottom:20px;
+}
+
 .product-image {
   display: block;
   margin-bottom:40px;
 }
 
 .product .col2{
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 }
 
 .service h2,
@@ -491,6 +495,10 @@ h2::after,
 .service h2:first-child,
 .studio h2:first-child{
   padding-top: 0;
+}
+
+.product.hire .product-box {
+  min-height: 500px;
 }
 
 
@@ -639,13 +647,13 @@ button:focus {
 
   /* Sections */
 
+  .product .col2 {
+    margin-bottom:60px;
+  }
+
   .product-box{
     margin-bottom: 20px;
     min-height:600px;
-  }
-
-  .product-box p {
-    margin-bottom:90px;
   }
 
   .main-button{
@@ -772,7 +780,7 @@ button:focus {
   }
 
   .product-box{
-    min-height:650px;
+    min-height:630px;
   }
 
 
@@ -783,6 +791,14 @@ button:focus {
 
   .studio .alt-box{
     min-height: 280px;
+  }
+
+  .product.hire .product-box {
+    min-height: 560px;
+  }
+
+  .product.people .product-box {
+    /*min-height:650px;*/
   }
 
 

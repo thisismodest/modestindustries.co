@@ -18,23 +18,28 @@ include 'header.php'; ?>
 
   <div class="section text">
     <h2 class="col1">Smile, we've made stuff.</h2>
-    <p class="col2">Every now and then one of us will come up with an idea that we'll end up building, either because it makes us smile or it's just down right useful.</p>
-    <p class="col2">Our products below are free to use and will, if used properly, improve your life. What's not to love about that? Take a peek and try them out.</p>
+    <p class="col2">Every now and then one of us will come up with an idea that we'll end up building, either because it makes us smile or we find it useful.</p>
+    <p class="col2">Some of these are prototypes, others are polished, so take a peek and have a play with what we've made. Like something? Get in touch.</p>
   </div>
 
   <div class="section product">
     <div class="product-box col2">
       <img src="img/png/sweat-roulette.png" class="product-image">
       <h2>Sweat Roulette</h2>
-      <p>Sweat Roulette is a cross-platform web-app we built to help you keep fit. There's one rule; do the exercise it says on the screen. Each one will last for 20-40 seconds before changing. Do the exercise as hard as you can for as long as you can. One exercise is equal to one point so once you're done you can tweet your score for bragging (or slagging) rights.</p>
-      <a href="http://sweatroulette.com" class="main-button">Play Sweat Roulette</a>
+      <p>Sweat Roulette is a cross-platform web-app made to help you get fit. It's easy to get started, there's only one rule – do the exercise for as long as it says on the screen.</p>
+      <p>Each exercise will last for 20-40 seconds before changing. Keep going as hard as you can for as long as you can. One point per exercise so once you're done, tweet your score. #humblebrag.</p>
+      <a href="http://sweatroulette.com" target="_blank" class="main-button">Play Sweat Roulette</a>
     </div>
  
-    <div class="product-box col2" style="opacity:0.4">
-      <img src="img/png/computer-and-phone.png" class="product-image">
-      <h2>More Coming Soon</h2>
-      <p>At the moment we have a few products in development, but they're not quite ready yet, so keep an eye on our products page or follow us on twitter for the latest releases <a href="http://twitter.com/thisismodest" target="_blank" title="Follow Modest Industries on Twitter... go on, you know you want to.">@thisismodest</a>. On the flip side, if you have an idea for a product that'll improve people lives and you want to let people use it for free, get in touch via our <a href="contact">contact form</a> and let's talk.</p>
-      <span class="main-button">Coming Soon!</span>
+    <div class="product-box col2">
+      <a href="http://deadwallet.com" target="_blank">
+        <img src="img/png/dead-wallet-by-modest-industries.png" class="product-image">
+      </a>
+      <h2>DeadWallet.com</h2>
+      <p>Stuff you didn't know you wanted, beautifully curated. Dead Wallet scours the web for the kind of stuff that'll kill your wallet. That's why we called it Dead Wallet. Clever, huh?</p>
+      <p>This project that will continue to be developed and evolve over time. If you'd like to collaborate or want to share some constructive feedback, get in touch let's talk about it.</p>
+
+      <a href="http://deadwallet.com" target="_blank" class="main-button">Visit Dead Wallet</a>
     </div>
 
   </div>

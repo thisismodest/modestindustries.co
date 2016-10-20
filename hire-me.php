@@ -22,7 +22,7 @@ include 'header.php'; ?>
     <p class="col2">Interested? We'd love to see your work and learn more about you. Take a look at the vacancies below and get in touch and tell us about yourself.</p>
   </div>
 
-  <div class="section product">
+  <div class="section product hire">
     <div class="product-box col2">
       <img src="img/png/cutting-board.png" class="product-image">
       <h2>Designer</h2>
