@@ -148,8 +148,8 @@ invennt_tc.main = (function() {
 
       
       if (this.sme_status === "YES" || this.sme_status === "NO") {
-        console.log("L: " + lower_range + "% H: " + higher_range + "% QEP: " + this.qep);
-        results.innerHTML = "Lower claim: £" + +l_qualifying_percentage.toFixed(2) + " Upper claim: £" + +h_qualifying_percentage.toFixed(2);
+        console.log("L: " + lower_range + " H: " + higher_range + " QEP: " + this.qep + "%");
+        results.innerHTML = "Lower claim: £" + l_qualifying_percentage.toFixed(2) + " Upper claim: £" + h_qualifying_percentage.toFixed(2);
       }
 
 
