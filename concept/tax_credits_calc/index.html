@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tax Credits Calculator</title>
+  <meta charset="UTF-8">
+  
+  <style type="text/css">
+    #i_tc_container {
+      width: 100%;
+
+    }
+
+    .i_tc_wrapper {
+      width: 100%;
+    }
+
+    .i_tc_sme_dropdown_wrapper,
+    .i_tc_call_wrapper,
+    .i_tc_results_wrapper {
+      display: none;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div id="i_tc_container">
+    <h1>Tax Credit Calculator</h1>
+
+    <!-- <form name="tax_credit_calc" id="tax_credit_calc"> -->
+
+    <div class="i_tc_turnover_wrapper">
+      <h2>Company Turnover:</h2>
+      <input type="number" id="i_tc_turnover" name="turnover" value="0" min="0" onkeyup="invennt_tc.main.calculator.turnover_calc()">
+    </div>
+
+    <div class="i_tc_sme_wrapper">
+      <h2>Are you an SME?</h2>
+      <select id="i_tc_sme" onchange="invennt_tc.main.calculator.sme(this.selectedIndex)">
+        <option value="default">-- Please Select --</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+
+    <div class="i_tc_sme_dropdown_wrapper">
+      <h2>What industry is your company in?</h2>
+      <select id="i_tc_sme_dropdown" onchange="invennt_tc.main.calculator.sme_formula(this.selectedIndex)">
+        <option value="default">-- Please Select --</option>
+        <option value="architect">Architect</option>
+        <option value="main_contractor">Main Contractor</option>
+        <option value="engineering_firm">Engineering Firm (Civil, M&amp;E)</option>
+        <option value="consultant">Consultant</option>
+        <option value="product_manufacturer">Product Manufacturer</option>
+        <option value="specialist_subcontractor">Specialist Subcontractor</option>
+        <option value="info_tech">IT</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="i_tc_call_wrapper">
+      <div class="i_tc_call"></div>
+    </div>
+
+    <div class="i_tc_results_wrapper">
+      <div class="i_tc_results"></div>
+    </div>
+    <!-- </form> -->
+
+  </div>
+
+  <script type="text/javascript" src="invennt-tax-credit-calc.js"></script>
+
+</body>
+</html>
+
