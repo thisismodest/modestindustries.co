@@ -31,10 +31,13 @@ invennt_tc.main = (function() {
       
       this.activeTurnover = true;
 
-      var newVal = turnoverVal.value.replace(/[^0-9][\.]/, turnoverVal.value);
+      var newVal = turnoverVal.value.replace(/[^0-9.]/g, "");
+      var commaVal = turnoverVal.value.replace(/[^0-9.,]/g, "");
+      // turnoverVal.value = commaVal;
       
       this.turnover = newVal;
 
+    
       console.log(newVal);
       this.makeSum();
     },
