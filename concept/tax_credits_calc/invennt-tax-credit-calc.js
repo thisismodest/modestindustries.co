@@ -30,7 +30,12 @@ invennt_tc.main = (function() {
       var turnoverVal = document.getElementById('i_tc_turnover');
       
       this.activeTurnover = true;
-      this.turnover = turnoverVal.value;
+
+      var newVal = turnoverVal.value.replace(/[^0-9][\.]/, turnoverVal.value);
+      
+      this.turnover = newVal;
+
+      console.log(newVal);
       this.makeSum();
     },
 
