@@ -4,8 +4,6 @@ invennt_tc.main = (function() {
   'strict';
 
   var init = function() {
-    console.log('invennt_tc.main loaded');
-
     // load eventFilter if it's on the right page
     if(document.getElementById('i_tc_container')) {
       calculator.init();
@@ -19,7 +17,7 @@ invennt_tc.main = (function() {
 
   var calculator = {
     init: function() {
-      console.log("Let's do some sums!");
+      // INIT'ED
     },
 
     turnover : 0,
@@ -64,7 +62,7 @@ invennt_tc.main = (function() {
         this.qep = 26;
         this.sme_status = "YES";
         sme_dropdown.style.display = "block";
-        this.toggle_turnover(false);
+        // this.toggle_turnover(false);
         // hide large company dropdown
       } else if (s === 2) { // NO
         this.qep = 8;
