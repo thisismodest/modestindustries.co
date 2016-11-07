@@ -62,16 +62,22 @@ invennt_tc.main = (function() {
         this.qep = 26;
         this.sme_status = "YES";
         sme_dropdown.style.display = "block";
-        // this.toggle_turnover(false);
-        // hide large company dropdown
+
+        if (this.activeTurnover) {
+          this.turnover_calc();
+        } 
+        
       } else if (s === 2) { // NO
         this.qep = 8;
         this.sme_status = "NO";
         this.nosme();
+        
+        if (this.activeTurnover) {
+          this.turnover_calc();
+        }   
 
         sme_dropdown.style.display = "none";
         this.toggle_turnover(true);
-        // show large company dropdown
         
       } else {
         sme_dropdown.style.display = "none";
