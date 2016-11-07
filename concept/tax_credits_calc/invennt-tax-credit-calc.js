@@ -13,6 +13,8 @@ invennt_tc.main = (function() {
 
   };
 
+  var activeTurnover = false;
+
   var calculator = {
     init: function() {
       console.log("Let's do some sums!");
@@ -26,25 +28,28 @@ invennt_tc.main = (function() {
 
     turnover_calc: function(){
       var turnoverVal = document.getElementById('i_tc_turnover');
+      
+      this.activeTurnover = true;
       this.turnover = turnoverVal.value;
       this.makeSum();
     },
 
-    nosme: function(s) {
+    nosme: function() {
       
       this.low = 6;
       this.high = 8;
 
-      this.makeSum();
     },
 
     sme: function(s) { 
-      var sme_dropdown = document.getElementsByClassName('i_tc_sme_dropdown_wrapper')[0];
+      var sme_dropdown = document.getElementsByClassName('i_tc_sme_dropdown_wrapper')[0],
+          resultsBox = document.getElementsByClassName('i_tc_results_wrapper')[0];
 
       if (s === 1) { // YES 
         this.qep = 26;
         this.sme_status = "YES";
         sme_dropdown.style.display = "block";
+        this.toggle_turnover(false);
         // hide large company dropdown
       } else if (s === 2) { // NO
         this.qep = 8;
@@ -52,14 +57,41 @@ invennt_tc.main = (function() {
         this.nosme();
 
         sme_dropdown.style.display = "none";
+        this.toggle_turnover(true);
         // show large company dropdown
+        
       } else {
         sme_dropdown.style.display = "none";
-        // hide large company dropdown
+        resultsBox.style.display = "none";
+        this.activeTurnover = false;
+        this.toggle_turnover(false);
+        this.toggle_contact(false);
       }
     },
 
+    toggle_turnover: function(b) {
+      var turnover_wrapper = document.getElementsByClassName('i_tc_turnover_wrapper')[0];   
+      if (b) {
+        turnover_wrapper.style.display = "block";
+      } else if (!b) {
+        turnover_wrapper.style.display = "none";
+      }
+    },
+
+    toggle_contact: function(b) {
+      var tc_callbox_wrapper = document.getElementsByClassName('i_tc_call_wrapper')[0];
+
+      if (b) {
+        tc_callbox_wrapper.style.display="block";
+      } else if (!b) {
+        tc_callbox_wrapper.style.display="none";
+      }
+
+    },
+
     sme_formula: function(s) {
+      
+      this.toggle_turnover(true);
 
       switch(s) {
 
@@ -114,57 +146,44 @@ invennt_tc.main = (function() {
 
         // OTHER
         case 8:
+          this.toggle_turnover(false);
           this.callUs();
           break;
 
         default:
+          var resultsBox = document.getElementsByClassName('i_tc_results_wrapper')[0];
+
           this.low = 0;
           this.high = 0;
-          this.makeSum();
+          resultsBox.style.display="none";
+          this.toggle_turnover(false);
+          this.toggle_contact(false);
       }
     },
 
     callUs: function(){
-      var tc_callbox_wrapper = document.getElementsByClassName('i_tc_call_wrapper')[0],
-          tc_callbox = document.getElementsByClassName('i_tc_call')[0],
-          resultsBox = document.getElementsByClassName('i_tc_results_wrapper')[0];
+      var resultsBox = document.getElementsByClassName('i_tc_results_wrapper')[0];
 
       resultsBox.style.display="none";
-      tc_callbox_wrapper.style.display="block";
-      tc_callbox.style.display="block";
+      this.toggle_contact(true);
     },
 
     makeSum: function(){
       var resultsBox = document.getElementsByClassName('i_tc_results_wrapper')[0],
           results = document.getElementsByClassName('i_tc_results')[0],
-          tc_callbox = document.getElementsByClassName('i_tc_call_wrapper')[0],
           lower_range = this.turnover * this.low / 100,
           higher_range = this.turnover * this.high / 100,
           l_qualifying_percentage = lower_range * this.qep / 100;
           h_qualifying_percentage = higher_range * this.qep / 100;
-
-      resultsBox.style.display="block";
-      tc_callbox.style.display="none";
-
       
-      if (this.sme_status === "YES" || this.sme_status === "NO") {
-        console.log("L: " + lower_range + " H: " + higher_range + " QEP: " + this.qep + "%");
-        results.innerHTML = "Lower claim: £" + l_qualifying_percentage.toFixed(2) + " Upper claim: £" + h_qualifying_percentage.toFixed(2);
+      if (this.activeTurnover === true) {
+        this.toggle_contact(true);
+        resultsBox.style.display="block";
+        if (this.sme_status === "YES" || this.sme_status === "NO") {
+          console.log("L: " + lower_range + " H: " + higher_range + " QEP: " + this.qep + "%");
+          results.innerHTML = "You can claim between <strong>£" + l_qualifying_percentage.toFixed(2) + "</strong> and <strong>£" + h_qualifying_percentage.toFixed(2) + "</strong>";
+        }
       }
-
-
-      // if (this.sme_status === "YES") {
-
-      //   console.log("SME – L: " + lower_range + "% H: " + higher_range + "% QEP: " + this.qep);
-
-      //   results.innerHTML = lower_range + " Upper: " + higher_range + " " + "SME";
-
-      // } else if (this.sme_status === "NO") {
-      //   console.log("NON-SME – L: " + lower_range + "% " + "H: " + higher_range + "%");
-
-      //   results.innerHTML = this.low + " "  + this.high + " " + this.turnover + " " + "Not SME";
-      // }
-    
     }
 
   };

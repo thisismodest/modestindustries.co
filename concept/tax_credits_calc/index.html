@@ -2,12 +2,78 @@
 <html>
 <head>
   <title>Tax Credits Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   
   <style type="text/css">
+    body {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.65;
+      color: #666;
+    }
+
+    .i_tc_results_wrapper,
+    .i_tc_turnover_wrapper input {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .i_tc_results_wrapper {
+      background-color: #ec6f2d;
+      color:#FFF;
+      padding:20px 10px;
+      margin:20px 0;
+      font-size:20px;
+    }
+
+    .i_tc_call_wrapper {
+      width: 100%;
+      margin:20px 0;
+    }
+
+    a.i_tc_call_us,
+    a.i_tc_download {
+      display: block;
+      width: calc(49.99999% - 10px);
+      background-color: #ec6f2d;
+      padding:20px 0;
+      color:#FFF;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    a.i_tc_call_us {
+      float: left;
+    }
+
+    a.i_tc_download {
+      float: right;
+    }
+
+    .i_tc_call_wrapper a:hover {
+      background-color: #ea793e;
+    }
+
+    .i_tc_call_wrapper p.tc_disclaimer {
+      margin-top:20px;
+      text-align: left;
+      font-size:10px;
+      display: block;
+      width: 100%;
+    }
+
+    .clearfix {
+      clear:both;
+      content:" ";
+    }
+
     #i_tc_container {
       width: 100%;
       text-align: center;
+      overflow: hidden;
     }
 
     .i_tc_wrapper {
@@ -16,10 +82,78 @@
 
     .i_tc_sme_dropdown_wrapper,
     .i_tc_call_wrapper,
-    .i_tc_results_wrapper {
+    .i_tc_results_wrapper,
+    .i_tc_turnover_wrapper {
       display: none;
     }
 
+    .tc_dropdown select,
+    .i_tc_turnover_wrapper input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      outline:0;
+      border:0;
+    }
+
+    .tc_dropdown select::-ms-expand,
+    .i_tc_turnover_wrapper input::-ms-expand { /* for IE 11 */
+      display: none;
+      outline:0;
+      border:0;
+    }
+
+    .tc_dropdown select {
+      position: relative;
+      width:100%;
+      padding:10px;
+      border-radius: 0px;
+      background-color: #FFF;
+      font-size: 20px;
+      color:#666;
+      border:1px solid #666;
+    }
+
+    .tc_dropdown {
+      position: relative;
+    }
+
+    .tc_dropdown::after {
+      content:"";
+      position: absolute;
+      right:14px;
+      bottom:16px;
+      width:10px;
+      height:10px;
+      z-index: 1001;
+
+      width: 0; 
+      height: 0; 
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      
+      border-top: 10px solid #666;
+
+      pointer-events: none;
+
+    }
+
+    .i_tc_turnover_wrapper{
+      width: 100%;
+    }
+
+    .i_tc_turnover_wrapper input {
+      padding:10px;
+      border:1px solid #666;
+      font-size: 20px;
+      width: 100%;
+      background-color: #FFF;
+    }
+    @media (max-width: 420px) {
+      .i_tc_call_wrapper {
+        font-size:10px;
+      }
+    }
 
   </style>
 </head>
@@ -27,14 +161,7 @@
   <div id="i_tc_container">
     <h1>Tax Credit Calculator</h1>
 
-    <!-- <form name="tax_credit_calc" id="tax_credit_calc"> -->
-
-    <div class="i_tc_turnover_wrapper">
-      <h2>Company Turnover:</h2>
-      <input type="number" id="i_tc_turnover" name="turnover" value="0" min="0" onkeyup="invennt_tc.main.calculator.turnover_calc()">
-    </div>
-
-    <div class="i_tc_sme_wrapper">
+    <div class="i_tc_sme_wrapper tc_dropdown">
       <h2>Are you an SME?</h2>
       <select id="i_tc_sme" onchange="invennt_tc.main.calculator.sme(this.selectedIndex)">
         <option value="default">-- Please Select --</option>
@@ -43,7 +170,7 @@
       </select>
     </div>
 
-    <div class="i_tc_sme_dropdown_wrapper">
+    <div class="i_tc_sme_dropdown_wrapper tc_dropdown">
       <h2>What industry is your company in?</h2>
       <select id="i_tc_sme_dropdown" onchange="invennt_tc.main.calculator.sme_formula(this.selectedIndex)">
         <option value="default">-- Please Select --</option>
@@ -58,14 +185,23 @@
       </select>
     </div>
 
-    <div class="i_tc_call_wrapper">
-      <div class="i_tc_call"></div>
+    <div class="i_tc_turnover_wrapper">
+      <h2>Company Turnover:</h2>
+      <input type="number" id="i_tc_turnover" name="turnover" placeholder="0" min="0" onkeyup="invennt_tc.main.calculator.turnover_calc()" onchange="invennt_tc.main.calculator.turnover_calc()">
     </div>
-    <br>
+
     <div class="i_tc_results_wrapper">
       <div class="i_tc_results"></div>
     </div>
-    <!-- </form> -->
+
+    <div class="i_tc_call_wrapper">
+      <div class="i_tc_call">
+        <a href="#" class="i_tc_call_us">Contact us</a>
+        <a href="#" class="i_tc_download">Download our guide</a>
+      </div>
+      <div class="clearfix"></div>
+      <p class="tc_disclaimer">This is a disclaimer about this calculator that needs to be rewritten, but while that's being done I'm just filling this out to get an idea of what the disclaimer will look like in-situ.</p>
+    </div>
 
   </div>
 
