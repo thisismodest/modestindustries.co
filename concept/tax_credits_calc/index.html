@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tax Credits Calculator</title>
+  <title>R&amp;D Tax Credit Calculator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   
@@ -15,7 +15,8 @@
     }
 
     .i_tc_results_wrapper,
-    .i_tc_turnover_wrapper input {
+    .i_tc_turnover_wrapper input,
+    .i_tc_info_box {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -45,6 +46,7 @@
       color:#FFF;
       text-transform: uppercase;
       text-decoration: none;
+      border-radius: 5px;
     }
 
     a.i_tc_call_us {
@@ -56,7 +58,7 @@
     }
 
     .i_tc_call_wrapper a:hover {
-      background-color: #ea793e;
+      background-color: #d56429;
     }
 
     .i_tc_call_wrapper p.tc_disclaimer {
@@ -86,7 +88,8 @@
     .i_tc_sme_dropdown_wrapper,
     .i_tc_call_wrapper,
     .i_tc_results_wrapper,
-    .i_tc_turnover_wrapper {
+    .i_tc_turnover_wrapper,
+    .i_tc_info_box {
       display: none;
     }
 
@@ -152,7 +155,43 @@
       width: 100%;
       background-color: #FFF;
     }
-    
+
+    .i_tc_sme_wrapper h2 {
+      position: relative;
+    }
+
+    .i_tc_i {
+      position: absolute;
+      background-color:#ec6f2d;
+      border-radius: 50%;
+      display: inline-block;
+      width:20px;
+      height:20px;
+      margin-left:5px;
+      line-height: 18px;
+      text-align: center;
+      font-size: 15px;
+      color:#FFF;
+    }
+
+    .i_tc_info_box {
+      width: 100%;
+      background-color: #666;
+      color:#FFF;
+      padding:20px;
+      margin:0 0 20px;
+      font-size: 12px;
+    }
+
+    .i_tc_info_box p {
+      margin:0;
+    }
+
+    .i_tc_info_box ul {
+      margin:0;
+      margin-top:10px;
+    }
+
     @media (max-width: 420px) {
       .i_tc_call_wrapper {
         font-size:10px;
@@ -163,10 +202,19 @@
 </head>
 <body>
   <div id="i_tc_container">
-    <h1>Tax Credit Calculator</h1>
+    <h1>R&amp;D Tax Credit Calculator</h1>
 
     <div class="i_tc_sme_wrapper tc_dropdown">
-      <h2>Are you an SME?</h2>
+      <h2>Are you an SME? <span class="i_tc_i" onclick="invennt_tc.main.calculator.toggle_sme_info()">?</span></h2>
+      <div class="i_tc_info_box">
+        <p>
+          To qualify as an SME, companies must have fewer than 500 employees and must either;
+          <ul>
+            <li>Have an annual turnover of less than €100 million, or</li>
+            <li>A balance sheet not exceeding €86 million</li>
+          </ul>
+        </p>
+      </div>
       <select id="i_tc_sme" onchange="invennt_tc.main.calculator.sme(this.selectedIndex)">
         <option value="default">-- Please Select --</option>
         <option value="yes">Yes</option>
@@ -175,7 +223,7 @@
     </div>
 
     <div class="i_tc_sme_dropdown_wrapper tc_dropdown">
-      <h2>What industry is your company in?</h2>
+      <h2>What type of company are you?</h2>
       <select id="i_tc_sme_dropdown" onchange="invennt_tc.main.calculator.sme_formula(this.selectedIndex)">
         <option value="default">-- Please Select --</option>
         <option value="architect">Architect</option>

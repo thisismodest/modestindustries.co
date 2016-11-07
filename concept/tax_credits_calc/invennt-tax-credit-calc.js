@@ -15,6 +15,8 @@ invennt_tc.main = (function() {
 
   var activeTurnover = false;
 
+  var sme_info_display = false;
+
   var calculator = {
     init: function() {
       console.log("Let's do some sums!");
@@ -32,6 +34,19 @@ invennt_tc.main = (function() {
       this.activeTurnover = true;
       this.turnover = turnoverVal.value;
       this.makeSum();
+    },
+
+    toggle_sme_info: function(){
+      var sme_info = document.getElementsByClassName('i_tc_info_box')[0];
+
+      if (!this.sme_info_display) {
+        sme_info.style.display = "block";
+        this.sme_info_display = true;
+      } else if (this.sme_info_display) {
+        sme_info.style.display = "none";
+        this.sme_info_display = false;
+      }
+      
     },
 
     nosme: function() {
