@@ -55,22 +55,31 @@ invennt_tc.main = (function() {
       
     },
 
-    nosme: function() {
-      
+    nosme: function() {  
       this.low = 6;
       this.high = 8;
-
     },
 
     sme: function(s) { 
       var sme_dropdown = document.getElementsByClassName('i_tc_sme_dropdown_wrapper')[0],
-          resultsBox = document.getElementsByClassName('i_tc_results_wrapper')[0];
+          resultsBox = document.getElementsByClassName('i_tc_results_wrapper')[0],
+          sme_dropdown_options = document.getElementById('i_tc_sme_dropdown');
+
+      this.toggle_contact(false);
+      this.toggle_message(false);
+      sme_dropdown_options.selectedIndex = 0;
+      
+      resultsBox.style.display="none";
+      this.activeTurnover = false;
 
       if (s === 1) { // YES 
         this.qep = 26;
         this.sme_status = "YES";
-        sme_dropdown.style.display = "block";
 
+        sme_dropdown.style.display = "block";     
+        
+        this.toggle_turnover(false);
+    
         if (this.activeTurnover) {
           this.turnover_calc();
         } 
@@ -127,6 +136,7 @@ invennt_tc.main = (function() {
           this.low = 4;
           this.high = 6;
           this.makeSum();
+          this.toggle_message(false);
           break;
 
         // MAIN CONTRACTOR
@@ -134,6 +144,7 @@ invennt_tc.main = (function() {
           this.low = 1;
           this.high = 3;
           this.makeSum();
+          this.toggle_message(false);
           break;
 
         // ENGINEERING FIRM
@@ -141,6 +152,7 @@ invennt_tc.main = (function() {
           this.low = 3;
           this.high = 5;
           this.makeSum();
+          this.toggle_message(false);
           break;
 
         // CONSULTANT
@@ -148,6 +160,7 @@ invennt_tc.main = (function() {
           this.low = 3;
           this.high = 5;
           this.makeSum();
+          this.toggle_message(false);
           break;
 
         // PRODUCT MANUFACTURER
@@ -155,6 +168,7 @@ invennt_tc.main = (function() {
           this.low = 10;
           this.high = 15;
           this.makeSum();
+          this.toggle_message(false);
           break;
 
         // SPECIALIST SUBCONTRACTOR
@@ -162,6 +176,7 @@ invennt_tc.main = (function() {
           this.low = 3;
           this.high = 7;
           this.makeSum();
+          this.toggle_message(false);
           break;
 
         // IT
@@ -169,6 +184,7 @@ invennt_tc.main = (function() {
           this.low = 20;
           this.high = 40;
           this.makeSum();
+          this.toggle_message(false);
           break;
 
         // OTHER
@@ -185,6 +201,7 @@ invennt_tc.main = (function() {
           resultsBox.style.display="none";
           this.toggle_turnover(false);
           this.toggle_contact(false);
+          this.toggle_message(false);
       }
     },
 
@@ -193,6 +210,17 @@ invennt_tc.main = (function() {
 
       resultsBox.style.display="none";
       this.toggle_contact(true);
+      this.toggle_message(true);
+    },
+
+    toggle_message: function(x) {
+      var otherResults = document.getElementsByClassName('i_tc_results_other')[0];
+
+      if (x) {
+        otherResults.style.display="block";
+      } else if (!x) {
+        otherResults.style.display="none";
+      }
     },
 
     makeSum: function(){
@@ -205,7 +233,9 @@ invennt_tc.main = (function() {
       
       if (this.activeTurnover === true) {
         this.toggle_contact(true);
+        
         resultsBox.style.display="block";
+
         if (this.sme_status === "YES" || this.sme_status === "NO") {
           console.log("L: " + lower_range + " H: " + higher_range + " QEP: " + this.qep + "%");
           results.innerHTML = "You can claim between <strong>£" + l_qualifying_percentage.toFixed(2) + "</strong> and <strong>£" + h_qualifying_percentage.toFixed(2) + "</strong>";

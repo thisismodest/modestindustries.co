@@ -16,19 +16,22 @@
 
     .i_tc_results_wrapper,
     .i_tc_turnover_wrapper input,
-    .i_tc_info_box {
+    .i_tc_info_box,
+    .i_tc_results_other {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
     }
 
-    .i_tc_results_wrapper {
-      background-color: #ec6f2d;
-      color:#FFF;
+    .i_tc_results_wrapper,
+    .i_tc_results_other {
+      /*background-color: #ec6f2d;*/
+      color:#ec6f2d;
       padding:20px 10px;
       margin:20px 0;
       font-size:20px;
       text-align: center;
+      border:1px solid #ec6f2d;
     }
 
     .i_tc_call_wrapper {
@@ -37,27 +40,42 @@
       text-align: center;
     }
 
-    a.i_tc_call_us,
-    a.i_tc_download {
+    .i_tc_button {
+      position: relative;
       display: block;
       width: calc(49.99999% - 10px);
       background-color: #ec6f2d;
-      padding:20px 0;
+      height:70px;
       color:#FFF;
       text-transform: uppercase;
       text-decoration: none;
       border-radius: 5px;
     }
 
-    a.i_tc_call_us {
+    .i_tc_call_us,
+    .i_tc_download {
+      position: absolute;
+      display: block;
+      transform: translateY(-50%);
+      top:50%;
+      left: 14px;
+      right: 14px;
+
+      text-decoration: none;
+      color:#FFF;
+
+      line-height: 1.3;
+    }
+
+    .i_tc_button.left {
       float: left;
     }
 
-    a.i_tc_download {
+    .i_tc_button.right {
       float: right;
     }
 
-    .i_tc_call_wrapper a:hover {
+    .i_tc_button:hover {
       background-color: #d56429;
     }
 
@@ -89,7 +107,8 @@
     .i_tc_call_wrapper,
     .i_tc_results_wrapper,
     .i_tc_turnover_wrapper,
-    .i_tc_info_box {
+    .i_tc_info_box,
+    .i_tc_results_other {
       display: none;
     }
 
@@ -193,7 +212,37 @@
       margin-top:10px;
     }
 
-    @media (max-width: 420px) {
+    .i_tc_calculate {
+      width:100%;
+      padding:10px 0;
+      text-align: center;
+      background-color: #666;
+      color:#FFF;
+      font-size: 14px;
+      margin-top:20px;
+      cursor: pointer;
+      /*border-radius:5px;*/
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .i_tc_calculate:hover {
+       background-color: #6F6F6F;
+    }
+
+    .i_tc_results_other p {
+      margin: 0 auto;
+      font-size: 14px;
+    }
+
+    .i_tc_results_other p a {
+      font-style: italic;
+      font-weight: 700;
+      color:inherit;
+      text-decoration: none;
+    }
+
+    @media (max-width: 450px) {
       .i_tc_call_wrapper {
         font-size:10px;
       }
@@ -211,8 +260,8 @@
         <p>
           To qualify as an SME, companies must have fewer than 500 employees and must either;
           <ul>
-            <li>Have an annual turnover of less than €100 million, or</li>
-            <li>A balance sheet not exceeding €86 million</li>
+            <li>Have an annual turnover of less than £100 million, or</li>
+            <li>A balance sheet not exceeding £86 million</li>
           </ul>
         </p>
       </div>
@@ -240,20 +289,31 @@
 
     <div class="i_tc_turnover_wrapper">
       <h2>Company Turnover:</h2>
-      <input type="text" pattern="[0-9]*" id="i_tc_turnover" name="turnover" placeholder="0" min="0" onkeyup="invennt_tc.main.calculator.turnover_calc()" >
+      <input type="text" pattern="[0-9]*" id="i_tc_turnover" name="turnover" placeholder="0" min="0">
+      <div class="i_tc_calculate" onclick="invennt_tc.main.calculator.turnover_calc()">Calculate now</div>
     </div>
 
     <div class="i_tc_results_wrapper">
       <div class="i_tc_results"></div>
     </div>
 
+    <div class="i_tc_results_other">
+      <p>
+        Contact us for a tailor made evaluation of your business. Email Tim Fitch <a href="mailto:tim.fitch@invennt.com">tim.fitch@invennt.com</a>. You may also download our R&amp;D guide below for more information.
+      </p>
+    </div>
+
     <div class="i_tc_call_wrapper">
       <div class="i_tc_call">
-        <a href="#" class="i_tc_call_us">Contact us</a>
-        <a href="#" class="i_tc_download">Download our guide</a>
+        <a href="http://www.invennt.com/contact-us/" class="i_tc_button left">
+          <div class="i_tc_call_us">Contact us</div>
+        </a>
+        <a href="http://www.invennt.com/services/rd-tax-claims-construction/#guide" class="i_tc_button right">
+          <div class="i_tc_download">Download our Guide to R&amp;D Tax Credits Now</div>
+        </a>
       </div>
       <div class="clearfix"></div>
-      <p class="tc_disclaimer">This is a disclaimer about this calculator that needs to be rewritten, but while that's being done I'm just filling this out to get an idea of what the disclaimer will look like in-situ.</p>
+      <p class="tc_disclaimer">Disclaimer: The Invennt R&amp;D Tax Credit calculator only gives a rough estimate of the potential levels of tax credits that you may be eligible to claim through either the RDEC or SME scheme. The calculator’s results are based on our experience to date. Results from the calculator do not constitute an offer or a guarantee of claim levels. Invennt recommends a thorough review to make sure you identify all qualifying R&amp;D projects and all eligible costs. In Invennt’s experience companies that submit their R&amp;D tax relief claims themselves, or through a non-specialist  firm, often end up significantly under-claiming or worse invalidating their claim.  Contact Invennt today to make sure your R&amp;D Tax Credit claim is optimised and compliant.</p>
     </div>
 
   </div>
