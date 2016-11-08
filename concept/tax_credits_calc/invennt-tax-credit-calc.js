@@ -228,8 +228,10 @@ invennt_tc.main = (function() {
           results = document.getElementsByClassName('i_tc_results')[0],
           lower_range = this.turnover * this.low / 100,
           higher_range = this.turnover * this.high / 100,
-          l_qualifying_percentage = lower_range * this.qep / 100;
-          h_qualifying_percentage = higher_range * this.qep / 100;
+          l_qualifying_percentage = lower_range * this.qep / 100,
+          h_qualifying_percentage = higher_range * this.qep / 100,
+          comma_l = l_qualifying_percentage.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+          comma_h = h_qualifying_percentage.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       
       if (this.activeTurnover === true) {
         this.toggle_contact(true);
@@ -238,7 +240,7 @@ invennt_tc.main = (function() {
 
         if (this.sme_status === "YES" || this.sme_status === "NO") {
           console.log("L: " + lower_range + " H: " + higher_range + " QEP: " + this.qep + "%");
-          results.innerHTML = "You can claim between <strong>£" + l_qualifying_percentage.toFixed(2) + "</strong> and <strong>£" + h_qualifying_percentage.toFixed(2) + "</strong>";
+          results.innerHTML = "You can claim between <strong>£" + comma_l + "</strong> and <strong>£" +comma_h + "</strong>";
         }
       }
     }
