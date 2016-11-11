@@ -37,8 +37,6 @@ invennt_tc.main = (function() {
       
       this.turnover = newVal;
 
-    
-      console.log(newVal);
       this.makeSum();
     },
 
@@ -55,11 +53,6 @@ invennt_tc.main = (function() {
       
     },
 
-    nosme: function() {  
-      this.low = 6;
-      this.high = 8;
-    },
-
     sme: function(s) { 
       var sme_dropdown = document.getElementsByClassName('i_tc_sme_dropdown_wrapper')[0],
           resultsBox = document.getElementsByClassName('i_tc_results_wrapper')[0],
@@ -71,6 +64,7 @@ invennt_tc.main = (function() {
       
       resultsBox.style.display="none";
       this.activeTurnover = false;
+
 
       if (s === 1) { // YES 
         this.qep = 26;
@@ -87,14 +81,13 @@ invennt_tc.main = (function() {
       } else if (s === 2) { // NO
         this.qep = 8;
         this.sme_status = "NO";
-        this.nosme();
         
+        sme_dropdown.style.display = "block";    
+
         if (this.activeTurnover) {
           this.turnover_calc();
         }   
-
-        sme_dropdown.style.display = "none";
-        this.toggle_turnover(true);
+        this.toggle_turnover(false);
         
       } else {
         sme_dropdown.style.display = "none";
@@ -239,7 +232,7 @@ invennt_tc.main = (function() {
         resultsBox.style.display="block";
 
         if (this.sme_status === "YES" || this.sme_status === "NO") {
-          console.log("L: " + lower_range + " H: " + higher_range + " QEP: " + this.qep + "%");
+          // console.log("L: " + lower_range + " H: " + higher_range + " QEP: " + this.qep + "%");
           results.innerHTML = "You can claim between <strong>£" + comma_l + "</strong> and <strong>£" +comma_h + "</strong>";
         }
       }
