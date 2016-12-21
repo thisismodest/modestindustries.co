@@ -72,6 +72,8 @@ a {
   vertical-align: baseline;
   background: transparent;
   text-decoration: none;
+  border:0;
+  outline:0;
 }
 
 a:hover, a:visted {
@@ -509,6 +511,15 @@ h2::after,
   min-height: 500px;
 }
 
+.clients {
+
+}
+
+ul.client-logos li {
+  float: left;
+  text-align: center;
+  width:33.33333333%;
+}
 
 /* Contact Form */
 
@@ -692,15 +703,10 @@ button:focus {
     clear: both;
   }
 
-  /*.col-image:nth-of-type(even){
-    float: right;
-    clear:right;
+  .product.latest-work .product-box {
+    min-height: 480px;
   }
 
-  .col-text:nth-of-type(odd){
-    float: right;
-    clear:right;
-  }*/
 
   /* Resize logo */
   .banner {
@@ -762,6 +768,13 @@ button:focus {
 
   }
 
+  ul.client-logos li {
+    float: left;
+    text-align: center;
+    width:20%;
+    width:calc(20% - 1px);
+  }
+
 }
 
 @media (min-width: 720px) {
@@ -808,7 +821,6 @@ button:focus {
   .product.people .product-box {
     /*min-height:650px;*/
   }
-
 
 }
 

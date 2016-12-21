@@ -43,14 +43,16 @@
         </li><li>
           <a href="services">SERVICES</a>
         </li><li>
-          <a href="people">OUR PEOPLE</a>
+          <a href="clients">CLIENTS</a>
+        </li><li>
+          <a href="people">PEOPLE</a>
         </li><li>
           <a href="products">PRODUCTS</a>
         </li><li>
           <a href="studio">STUDIO</a>
-        </li><li>
+        </li><!--<li>
           <a href="hire-me" style="color:#ef1616;">VACANCIES</a>
-        </li>
+        </li>-->
       </ul>';
 
     echo $custom_css; ?>
