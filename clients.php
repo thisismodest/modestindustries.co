@@ -38,7 +38,7 @@ include 'header.php'; ?>
   </div>
 
   <div class="section clients">
-    <h2 class="col1">People we've worked with</h2>
+    <h2 class="col1">Who we've worked with</h2>
     <ul class="client-logos">
       <li>
         <a href="http://d2e.com/" target="_blank">
