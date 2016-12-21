@@ -512,7 +512,7 @@ h2::after,
 }
 
 .clients {
-
+  margin-top:30px;
 }
 
 ul.client-logos li {
@@ -705,6 +705,7 @@ button:focus {
 
   .product.latest-work .product-box {
     min-height: 480px;
+    margin-bottom: 40px;
   }
 
 
@@ -766,6 +767,10 @@ button:focus {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 
+  }
+  
+  .clients {
+    margin-top:0px;
   }
 
   ul.client-logos li {

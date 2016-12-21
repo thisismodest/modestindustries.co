@@ -116,6 +116,9 @@ include 'header.php'; ?>
         </a>
       </li>
     </ul>
+    <div class="clearfix"></div>
+    <a class="cta-btn" href="contact">Become a client</a>
   </div>
+
 
 <?php include 'footer.php'; ?>
