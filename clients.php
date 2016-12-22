@@ -56,8 +56,8 @@ include 'header.php'; ?>
         </a>
       </li>
       <li>
-        <a href="http://www.tottenhamhotspur.com/home/" target="_blank">
-          <img src="img/client/logo/spurs_logo.png" alt="Tottenham Hotspur">
+        <a href="http://visionpath.co.uk/" target="_blank">
+          <img src="img/client/logo/visionpath_logo.png" alt="Visionpath Education">
         </a>
       </li>
       <li>
@@ -81,8 +81,8 @@ include 'header.php'; ?>
         </a>
       </li>
       <li>
-        <a href="http://visionpath.co.uk/" target="_blank">
-          <img src="img/client/logo/visionpath_logo.png" alt="Visionpath Education">
+        <a href="http://obviouslycreative.co.uk/" target="_blank">
+          <img src="img/client/logo/obviously_creative_logo.png" alt="Obviously Creative">
         </a>
       </li>
       <li>
