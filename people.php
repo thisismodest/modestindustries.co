@@ -51,12 +51,10 @@ include 'header.php'; ?>
     <div class="product-box col2">
       <img src="img/png/charlotte.png" class="product-image">
       <h2>Charlotte</h2>
-      <p>Charlotte's background using real materials to make beautiful objects and the ability to translate it on screen gives her the extra depth and versatility that we love to see here at Modest. Behind her beaming smile is a meticulous hands-on designer with work ranging from typography and layouts to illustration and hand-sewn letter cushions.</p>
+      <p>Charlotte's background using real materials to make beautiful objects and the ability to translate it on screen gives her the extra depth and versatility we love to see. Behind her beaming smile is a meticulous hands-on designer comfortable designing for screens and in real life, with skill ranging from hand-drawn typography to engaging email design.</p>
       <a href="http://twitter.com/beingcharlottex" alt="Follow Charlotte on Twitter" class="multi-button btn2">Twitter</a>
       <a href="http://www.beingcharlotte.com/" alt="Read Charlotte's Blog" class="multi-button btn2">Blog</a>
     </div>
   </div>
 
 <?php include 'footer.php'; ?>
-
-
