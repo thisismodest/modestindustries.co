@@ -9,7 +9,7 @@
 
           <div class="to-top">
           <a class="scroll" data-speed="400" data-easing="easeOutQuad" data-url="false" href="#header"><img src="img/core/up-arrow.png"></a>
-              
+
           </div>
 
           <div class="footer-logo">
@@ -18,7 +18,7 @@
             </a>
           </div>
 
-          <p class="footer-copyright">&copy; 2014-<?php echo date('Y');?> MODEST INDUSTRIES LTD • Company No. 09229917 • Registered in England &amp; Wales at Unit 11, Hove Business Centre, Hove, East Sussex, BN3 6HA</p>
+          <p class="footer-copyright">&copy; 2014-<?php echo date('Y');?> MODEST INDUSTRIES LTD • Company No. 09229917 • Registered in England &amp; Wales at First Floor, Telecom House, 125-135 Preston Road, Brighton, BN1 6AF</p>
         </div>
       </div>
 
