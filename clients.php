@@ -76,7 +76,7 @@ include 'header.php'; ?>
         </a>
       </li>
       <li>
-        <a href="http://jackwills.co.uk/" target="_blank">
+        <a href="http://jackwills.com/" target="_blank">
           <img src="img/client/logo/jack_wills_logo.png" alt="Jack Wills">
         </a>
       </li>
