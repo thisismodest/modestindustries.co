@@ -45,8 +45,6 @@
         </li><li>
           <a href="clients">CLIENTS</a>
         </li><li>
-          <a href="people">PEOPLE</a>
-        </li><li>
           <a href="products">PRODUCTS</a>
         </li><li>
           <a href="studio">STUDIO</a>
