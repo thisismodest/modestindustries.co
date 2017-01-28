@@ -76,13 +76,13 @@ include 'header.php'; ?>
         </a>
       </li>
       <li>
-        <a href="http://www.brane.co.uk/" target="_blank">
-          <img src="img/client/logo/brane_logo.png" alt="Brane">
+        <a href="http://jackwills.co.uk/" target="_blank">
+          <img src="img/client/logo/jack_wills_logo.png" alt="Jack Wills">
         </a>
       </li>
       <li>
-        <a href="http://obviouslycreative.co.uk/" target="_blank">
-          <img src="img/client/logo/obviously_creative_logo.png" alt="Obviously Creative">
+        <a href="http://www.brane.co.uk/" target="_blank">
+          <img src="img/client/logo/brane_logo.png" alt="Brane">
         </a>
       </li>
       <li>
