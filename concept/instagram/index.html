@@ -1,137 +1,138 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Modest Instagram Feed</title>
-</head>
+  <head>
+    <title>Modest Instagram Feed</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
 
-<style>
-  * {
-    box-sizing: border-box;
-  }
-
-  html, body {
-    margin:0;
-    padding:0;
-    font-family: sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .header{
-    text-align: center;
-    border-bottom:1px solid #ccc;
-    margin-bottom:8px;
-  }
-
-  h1 {
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin:0;
-    margin-right:-2px;
-    padding:30px 0;
-    display: block;
-    font-size: 1em;
-  }
-
-  #results {
-    width: 100%;
-    max-width: 980px;
-    margin: 0 auto;
-  }
-
-  #results img {
-    display: block;
-    margin:0;
-    padding:0;
-    line-height: 0;
-    float: left;
-    width: 33.3333333333333%;
-    padding:1%;
-    opacity: 0;
-    transition: all 2s;
-  }
-
-  #results img.fade {
-    opacity: 1;
-  }
-
-</style>
-
-<body>
-  <div class="header">
-    <h1>INSTAGRAM FEED</h1>
-  </div>
-  <div id="results"></div>
-
-<script type="text/javascript">
-  var results = document.getElementById('result'),
-      accessToken = '1935076923.0b4642b.2d1a206e32064437822a1d7b2f2a6648',
-      userID = '1935076923', // Jack Wills ID is 195530174, but need their access token
-      url = 'https://api.instagram.com/v1/users/' + userID + '/media/recent/?access_token=' + accessToken + "&callback=returnJSON";
-
-  var fader;
-
-  // Create new <script> element
-  var script_e = document.createElement('script');
-
-  // Set new <script> src to Instagram JSONP API
-  script_e.src = url;
-
-  // Put <script src="<instagramAPI"> in <head>
-  document.getElementsByTagName('head')[0].appendChild(script_e);
-
-  // Parse JSONP data 
-  function returnJSON(json) {
-    var jsonData = json.data;
-
-    generateImages(jsonData);
-    // console.log(jsonData[0].images.standard_resolution.url);
-  }
-
-  function generateImages(jsonData) {
-    // Declare number of images to show (18 fits nicely into grid of 3 – max 20)
-    var imageCount = 18;
-
-    // If feed has less images than imageCount, return all images
-    if (jsonData.length <= imageCount ) {
-      imageCount = jsonData.length;
+  <style>
+    * {
+      box-sizing: border-box;
     }
 
-    // Loops through JSON and created img element on page
-    for (var i = 0; i < imageCount; i++ ) {
-      var image = document.createElement('img');
-      image.src = jsonData[i].images.standard_resolution.url;
-      document.getElementById('results').appendChild(image);
-
-      if (i === imageCount-1) {
-        animate();
-      }
+    html, body {
+      margin:0;
+      padding:0;
+      font-family: sans-serif;
+      -webkit-font-smoothing: antialiased;
     }
 
-    function animate() {
-      var count = 0;
-      fader = setInterval(function(){
-        fadeElement(count);
-        count++;
-      }, 300);
+    .header{
+      text-align: center;
+      border-bottom:1px solid #ccc;
+      margin-bottom:8px;
     }
 
-    function fadeElement(c) {
-      document.getElementsByTagName('img')[c].className = "fade";
-      if (c === (imageCount - 1)) {
-        clearInterval(fader);
+    h1 {
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin:0;
+      margin-right:-2px;
+      padding:30px 0;
+      display: block;
+      font-size: 1em;
+    }
+
+    #results {
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    #results img {
+      display: block;
+      margin:0;
+      padding:0;
+      line-height: 0;
+      float: left;
+      width: 33.3333333333333%;
+      padding:1%;
+      opacity: 0;
+      transition: all 2s;
+    }
+
+    #results img.fade {
+      opacity: 1;
+    }
+
+  </style>
+
+  <body>
+    <div class="header">
+      <h1>INSTAGRAM FEED</h1>
+    </div>
+    <div id="results"></div>
+
+    <script type="text/javascript">
+      var results = document.getElementById('result'),
+          accessToken = '1935076923.0b4642b.2d1a206e32064437822a1d7b2f2a6648',
+          userID = '1935076923', // Jack Wills ID is 195530174, but need their access token
+          url = 'https://api.instagram.com/v1/users/' + userID + '/media/recent/?access_token=' + accessToken + "&callback=returnJSON";
+
+      var fader;
+
+      // Create new <script> element
+      var script_e = document.createElement('script');
+
+      // Set new <script> src to Instagram JSONP API
+      script_e.src = url;
+
+      // Put <script src="<instagramAPI"> in <head>
+      document.getElementsByTagName('head')[0].appendChild(script_e);
+
+      // Parse JSONP data 
+      function returnJSON(json) {
+        var jsonData = json.data;
+
+        generateImages(jsonData);
+        // console.log(jsonData[0].images.standard_resolution.url);
       }
 
-    }
+      function generateImages(jsonData) {
+        // Declare number of images to show (18 fits nicely into grid of 3 – max 20)
+        var imageCount = 18;
 
-  }
+        // If feed has less images than imageCount, return all images
+        if (jsonData.length <= imageCount ) {
+          imageCount = jsonData.length;
+        }
+
+        // Loops through JSON and created img element on page
+        for (var i = 0; i < imageCount; i++ ) {
+          var image = document.createElement('img');
+          image.src = jsonData[i].images.standard_resolution.url;
+          document.getElementById('results').appendChild(image);
+
+          if (i === imageCount-1) {
+            animate();
+          }
+        }
+
+        function animate() {
+          var count = 0;
+          fader = setInterval(function(){
+            fadeElement(count);
+            count++;
+          }, 300);
+        }
+
+        function fadeElement(c) {
+          document.getElementsByTagName('img')[c].className = "fade";
+          if (c === (imageCount - 1)) {
+            clearInterval(fader);
+          }
+
+        }
+
+      }
 
 
 
 
 
 
-</script>
+    </script>
 
-</body>
+  </body>
 </html>
