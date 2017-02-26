@@ -21,6 +21,7 @@
       text-align: center;
       border-bottom:1px solid #ccc;
       margin-bottom:8px;
+      overflow: hidden;
     }
 
     h1 {
@@ -35,6 +36,7 @@
     }
 
     #results {
+      position: relative;
       width: 100%;
       max-width: 980px;
       margin: 0 auto;
@@ -46,14 +48,77 @@
       padding:0;
       line-height: 0;
       float: left;
-      width: 33.3333333333333%;
-      padding:1%;
+      width: 100%;
+      padding:3%;
       opacity: 0;
-      transition: all 2s;
+      transition: all 0.5s;
     }
 
     #results img.fade {
       opacity: 1;
+    }
+
+    .loader {
+      position: fixed;
+      top:50%;
+      left:50%;
+      width:26px;
+      height:26px;
+      margin-top:-13px;
+      margin-left:-13px;
+      animation: rotator;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count:infinite;
+    }
+
+    .loader::before {
+      content:"";
+      position: absolute;
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background-color:navy;
+    }
+
+    .loader::after {
+      content:"";
+      position: absolute;
+      bottom:0;
+      right:0;
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background-color:lightblue;
+    }
+
+    @keyframes rotator {
+      from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @media (min-width: 376px) {
+      #results img {
+        width: 50%;
+        padding:2%;
+      }
+    }
+
+    @media (min-width: 600px) {
+      #results img {
+        width: 33.3333333333333%;
+        padding:1%;
+      }
     }
 
   </style>
@@ -62,10 +127,13 @@
     <div class="header">
       <h1>INSTAGRAM FEED</h1>
     </div>
-    <div id="results"></div>
+    <div id="results">
+      <div class="loader"></div>
+    </div>
 
     <script type="text/javascript">
-      var results = document.getElementById('result'),
+
+      var results = document.getElementById('results'),
           accessToken = '1935076923.0b4642b.2d1a206e32064437822a1d7b2f2a6648',
           userID = '1935076923', // Jack Wills ID is 195530174, but need their access token
           url = 'https://api.instagram.com/v1/users/' + userID + '/media/recent/?access_token=' + accessToken + "&callback=returnJSON";
@@ -105,7 +173,10 @@
           document.getElementById('results').appendChild(image);
 
           if (i === imageCount-1) {
-            animate();
+            window.onload = function() {
+              removeLoader();
+              animate();
+            }
           }
         }
 
@@ -122,9 +193,12 @@
           if (c === (imageCount - 1)) {
             clearInterval(fader);
           }
-
         }
+      }
 
+      function removeLoader() {
+        var loader = document.getElementsByClassName('loader')[0];
+        results.removeChild(loader);
       }
 
 
