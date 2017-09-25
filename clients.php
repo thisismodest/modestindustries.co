@@ -16,7 +16,7 @@ $custom_scripts = "";
 
 include 'header.php'; ?>
 
-  <div class="section product latest-work">
+  <!-- <div class="section product latest-work">
    <h2 class="col1">Latest Work</h2>
     <div class="product-box col2">
       <a href="http://wiltonclassicsupercar.co.uk/" target="_blank" alt="Wilton Classic & Supercar">
@@ -35,7 +35,7 @@ include 'header.php'; ?>
       <p>Working with the same design agency we were tasked with helping update an old clunky website by developing a new responsive Wordpress theme and assist with server migration.</p>
       <a href="http://heroevents.eu/" target="_blank" alt="Historic Endurance Rallying Organisation" class="multi-button btn1">Visit HERO</a>
     </div>
-  </div>
+  </div> -->
 
   <div class="section clients">
     <h2 class="col1">Who we've worked with</h2>
