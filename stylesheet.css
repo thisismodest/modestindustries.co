@@ -867,6 +867,14 @@ button:focus {
 }
 
 
+/* BUTTON TRANSITIONS */
+.multi-button,
+.main-button,
+.cta-btn {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
 
 
 /* CSS3 FADE IN TRANSITION */
