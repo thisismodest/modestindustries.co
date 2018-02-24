@@ -36,7 +36,7 @@ include 'header.php'; ?>
     </div>
 
     <div class="product-box col2">
-      <a href="http://deadwallet.com" title="Dead Wallet" target="_blank">
+      <a href="https://deadwallet.com" title="Dead Wallet" target="_blank">
         <img src="img/png/dead-wallet-by-modest-industries.png" class="product-image">
       </a>
       <h2>DeadWallet.com</h2>
