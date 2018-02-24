@@ -46,17 +46,6 @@ include 'header.php'; ?>
       <a href="https://deadwallet.com" title="Dead Wallet" target="_blank" class="main-button">Visit Dead Wallet</a>
     </div>
 
-    <!-- <div class="product-box col2">
-      <a href="http://sweatroulette.com" target="_blank">
-        <img src="img/png/sweat-roulette.png" class="product-image">
-      </a>
-      <h2>Sweat Roulette</h2>
-      <p>Sweat Roulette is a cross-platform prototype made to help you get fit. It's easy to get started, there's only one rule – do the exercise for as long as it says on the screen.</p>
-      <p>Each exercise will last for 20-40 seconds before changing. Keep going as hard as you can for as long as you can. One point per exercise so once you're done, tweet your score. #humblebrag.</p>
-
-      <a href="http://sweatroulette.com" target="_blank" class="main-button">Play Sweat Roulette</a>
-    </div> -->
-
   </div>
 
 <?php include 'footer.php'; ?>
