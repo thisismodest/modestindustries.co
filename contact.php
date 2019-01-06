@@ -55,7 +55,10 @@ if ($action=="") { /* conditional to check if form has been submitted */
       <label for='message'>Message</label>
       <textarea name='message' placeholder='Go ahead...' required ></textarea>
     </div>
-
+    <div>
+      <label for='rb'>BTW... Are you a robot?</label>
+      <input type='text' name='rb' placeholder='Type Yes or No' required >
+    </div>
     <div>
       <button type='submit'>Submit</button>
     </div>
@@ -67,40 +70,52 @@ if ($action=="") { /* conditional to check if form has been submitted */
   include 'footer.php';
 
   } else { /* check required fields are filled */
-  $name=$_REQUEST['name'];
-  $tel=$_REQUEST['tel'];
-  $email=$_REQUEST['email'];
-  $url=$_REQUEST['url'];
-  $message=$_REQUEST['message'];
-  if (($name=="")||($email=="")||($message=="")) { /* show form error page */
+    $name=$_REQUEST['name'];
+    $tel=$_REQUEST['tel'];
+    $email=$_REQUEST['email'];
+    $url=$_REQUEST['url'];
+    $message=$_REQUEST['message'];
+    $robot=$_REQUEST['rb'];
 
-    $site_title = "Uh Oh!";
-    $intro_title = "Uh oh!";
-    $intro_description = "<em>'Name'</em>, <em>'Email'</em> and <em>'Message'</em> are required fields. Please <a style='border-bottom:2px solid black;' href='javascript:window.location.href=window.location.href'>click here</a> and fill out the form again.";
+    if (strtolower(trim($robot)) === "no") {
 
-    /* NEEDS 'BACK TO CONTACT FORM' HREF LINK  ^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+      if (($name=="")||($email=="")||($message=="")) { /* show form error page */
+      $site_title = "Uh Oh!";
+      $intro_title = "Uh oh!";
+      $intro_description = "<em>'Name'</em>, <em>'Email'</em> and <em>'Message'</em> are required fields. Please <a style='border-bottom:2px solid black;' href='javascript:window.location.href=window.location.href'>click here</a> and fill out the form again.";
 
-    $intro_img_url = "header-cups-failed.png";
-    $intro_img_alt = "UH OH!";
+      $intro_img_url = "header-cups-failed.png";
+      $intro_img_alt = "UH OH!";
 
-    include 'header.php';
-    include 'footer.php';
+      include 'header.php';
+      include 'footer.php';
 
-  } else { /* show thank you */
-    $from="From: $name<$email>\r\nReturn-path: $email";
-    $subject="Modest Contact Form";
-    $message="$message\n\n$name\n<$email>\n$tel\n$url\n\nSent via the Modest Contact Form";
-    mail("hello@modestindustries.co", $subject, $message, $from);
+    } else { /* show thank you */
+      $from="From: $name<$email>\r\nReturn-path: $email";
+      $subject="Modest Contact Form";
+      $message="$message\n\n$name\n<$email>\n$tel\n$url\n\nSent via the Modest Contact Form";
+      mail("hello@modestindustries.co", $subject, $message, $from);
 
-    $site_title = "Thank You!";
+      $site_title = "Thank You!";
 
-    $intro_title = "Thank You!";
-    $intro_description = "Your message has been sent. We'll get back to you as soon as we possibly can.";
+      $intro_title = "Thank You!";
+      $intro_description = "Your message has been sent. We'll get back to you as soon as we possibly can. While you wait, why not check out some of the things we've made <a style='border-bottom:2px solid black;' href='products' title='Products by Modest'>here</a> or follow <a style='border-bottom:2px solid black;' target='_blank' href='https://instagram.com/thisismodest' title='Follow Modest Industries on Instagram'>us on Instagram here</a>";
 
-    $intro_img_url = "header-cups-success.png";
-    $intro_img_alt = "Thank you for your message"; 
+      $intro_img_url = "header-cups-success.png";
+      $intro_img_alt = "Thank you for your message"; 
 
-    include 'header.php';
-    include 'footer.php';
+      include 'header.php';
+      include 'footer.php';
+      }
+    } else {
+      $site_title = "Uh Oh!";
+      $intro_title = "Uh oh!";
+      $intro_description = "Are you really a robot? Please <a style='border-bottom:2px solid black;' href='javascript:window.location.href=window.location.href'>click here</a> and fill out the form again and type 'No' in the robot field.";
+
+      $intro_img_url = "header-cups-failed.png";
+      $intro_img_alt = "UH OH!";
+
+      include 'header.php';
+      include 'footer.php';
     }
   } ?>
