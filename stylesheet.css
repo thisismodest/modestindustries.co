@@ -307,7 +307,7 @@ img.intro-image{
    ============================== */
 body, input, textarea{
   font-family: 'Georgia', Georgia, Times, 'Times New Roman', serif;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 1px;
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
@@ -372,7 +372,7 @@ p.col1, p.col2 {
 }
 
 .menu-btn{
-  font-size: 1em;
+  font-size: 1rem;
   letter-spacing: 0.8px;
 }
 
@@ -386,7 +386,7 @@ p.col1, p.col2 {
 }
 
 #menu li {
-  font-size: 0.65em;
+  font-size: 0.8rem;
 }
 
 #menu li a:hover,
@@ -672,7 +672,7 @@ button:focus {
 
   .product-box{
     margin-bottom: 20px;
-    min-height:600px;
+    min-height:510px;
   }
 
   .main-button{
@@ -806,7 +806,7 @@ button:focus {
   }
 
   .product-box{
-    min-height:630px;
+    min-height:530px;
   }
 
 
@@ -852,7 +852,6 @@ button:focus {
 @media (min-width: 980px) {
 
   #menu li {
-    font-size: 0.67em;
     margin-left: 16px;
   }
 

@@ -23,15 +23,24 @@ include 'header.php'; ?>
   </div>
 
   <div class="section product">
-  
+
+    <div class="product-box col2">
+      <a href="https://browsersnippets.com" title="Browser Snippets" target="_blank">
+        <img src="img/png/browser-snippets-by-modest-industries.png" class="product-image">
+      </a>
+      <h2>Browser Snippets</h2>
+      <p>Write, share, and execute JavaScript snippets on any site with Browser Snippets and its companion Chrome Extension.</p>
+      <p>Great for sharing useful snippets with your non-developer colleagues.</p>
+      <a href="https://browsersnippets.com" title="Browser Snippets" target="_blank" class="main-button">Visit Browser Snippets</a>
+    </div>
+
     <div class="product-box col2">
       <a href="https://plottd.com" title="Plottd" target="_blank">
         <img src="img/png/plottd-by-modest-industries.png" class="product-image">
       </a>
       <h2>Plottd.com</h2>
-      <p>Plottd allows you to easily add interactive hotspots to your images and embed them on your website or blog. Perfect for content publishers and independent businesses.</p>
-      <p>Unlike other companies providing a similar service, Plottd aims to be as accessible as possible, which is why it'll be free and not require sign up to do basic image plotting.</p>
-
+      <p>Plottd allows you to easily add interactive hotspots to your images and embed them on your website or blog.</p>
+      <p>Perfect for content publishers and independent businesses.</p>
       <a href="https://plottd.com" title="Plottd" target="_blank" class="main-button">Visit Plottd</a>
     </div>
 
@@ -40,9 +49,8 @@ include 'header.php'; ?>
         <img src="img/png/dead-wallet-by-modest-industries.png" class="product-image">
       </a>
       <h2>DeadWallet.com</h2>
-      <p>Stuff you didn't know you wanted, beautifully curated. Dead Wallet scours the web for the kind of stuff that'll kill your wallet. That's why we called it Dead Wallet. Clever, huh?</p>
-      <p>Dead Wallet will continue to be developed and evolve over time. If you'd like to collaborate or want to share some constructive feedback, get in touch let's talk about it.</p>
-
+      <p>Stuff you didn't know you wanted, beautifully curated. Dead Wallet scours the web for the kind of stuff that'll kill your wallet.</p>
+      <p>That's why we called it Dead Wallet. Clever, huh?</p>
       <a href="https://deadwallet.com" title="Dead Wallet" target="_blank" class="main-button">Visit Dead Wallet</a>
     </div>
 
