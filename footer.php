@@ -19,7 +19,7 @@
             </a>
           </div>
 
-          <p class="footer-copyright">&copy; 2014-<?php echo date('Y');?> MODEST INDUSTRIES LTD • Company No. 09229917 • Registered in England &amp; Wales at First Floor, Telecom House, 125-135 Preston Road, Brighton, BN1 6AF</p>
+          <p class="footer-copyright">&copy; 2014-<?php echo date('Y');?> MODEST INDUSTRIES LTD • Company No. 09229917 • Registered in England &amp; Wales at The Knoll Business Centre, Unit W8A, 325-327 Old Shoreham Road, Hove, BN3 7GS</p>
         </div>
       </div>
 
