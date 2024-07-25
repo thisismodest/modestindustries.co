@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-// import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 import { osFont } from '@/app/ui/fonts';
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <GoogleAnalytics gaId="G-1MY29QVR2H" /> */}
+      <GoogleAnalytics gaId="G-1MY29QVR2H" />
       <body className={osFont.variable}>
         <Navigation />
         <main id="container">
