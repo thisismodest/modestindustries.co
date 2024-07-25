@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /concept
+Disallow: /people
+Disallow: /hire-me
