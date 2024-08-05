@@ -18,8 +18,7 @@ export default function Footer() {
         </a>
       </div>
 
-      <p className="footer-copyright">&copy; 2014-{new Date().getUTCFullYear()} MODEST INDUSTRIES LTD • Company No. 09229917 • Registered in England &amp; Wales at The Knoll Business Centre, Unit W8A, 325-327 Old Shoreham Road, Hove, BN3 7GS</p>
+      <p className="footer-copyright">&copy; 2014-2024 MODEST INDUSTRIES LTD • Company No. 09229917 • Registered in England &amp; Wales at The Knoll Business Centre, Unit W8A, 325-327 Old Shoreham Road, Hove, BN3 7GS</p>
     </footer >
   )
-
 }
