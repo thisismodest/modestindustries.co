@@ -714,15 +714,11 @@ button:focus {
 
   .product-box {
     margin-bottom: 20px;
-    min-height: 510px;
+    /* min-height: 510px; */
   }
 
   .main-button {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
   }
 
   .btn2 {
@@ -747,10 +743,12 @@ button:focus {
   }
 
   .product.latest-work .product-box {
-    min-height: 480px;
     margin-bottom: 40px;
   }
 
+  .product.latest-work {
+    min-height: 480px;
+  }
 
   /* Resize logo */
   .banner {
