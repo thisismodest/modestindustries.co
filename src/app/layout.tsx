@@ -7,7 +7,7 @@ import Navigation from "./ui/navigation/navigation";
 import Footer from "./ui/footer/footer";
 
 export const metadata: Metadata = {
-  title: "Modest Industries: Digital Creative Studio",
+  title: "Modest Industries: Boutique Digital Studio",
   description: "Modest Industries is a small creative studio specialising in ideas, design and development.",
   keywords: "modest industries, modest, digital studio, creative studio, advertising, marketing, design, web development, html5 banners, development, banners, social media, idea generation, strategy",
   metadataBase: new URL('https://modestindustries.co'),
