@@ -19,6 +19,9 @@ export default function Navigation() {
         <li>
           <a href="/products/">PRODUCTS</a>
         </li>
+        <li>
+          <a href="/social/">SOCIAL ADS</a>
+        </li>
         {/* <li>
           <a href="/studio/">STUDIO</a>
         </li> */}
